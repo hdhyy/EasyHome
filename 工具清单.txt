@@ -1,0 +1,13 @@
+API工具：swagger
+后台框架：djangle
+数据库：mysql
+高速缓存：redis
+语言1：python
+语言2：javascript
+语言3：html+css
+图形：webgl（three.js等）
+敏捷开发：jira+conflunce
+建模：3dmax，maya等
+部署：nginx+uwsgi
+
+文档：word，visio，excel，ppt
