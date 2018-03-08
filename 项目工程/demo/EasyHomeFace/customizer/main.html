@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>易家家装设计系统登录</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/foundation/5.5.3/css/foundation.min.css">
+    <link rel="stylesheet" href="public/css/wide_screen.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/foundation/5.5.3/js/foundation.min.js"></script>
+    <script src="https://cdn.bootcss.com/foundation/5.5.3/js/vendor/modernizr.js"></script>
+</head>
+<body>
+
+<div id="header" class="medium-12 columns small-centered"></div>
+<div id="left_bar" class="medium-10 columns small-centered"></div>
+<div id="main_frame" class="medium-10 columns small-centered"></div>
+<div id="right_bar" class="medium-10 columns small-centered"></div>
+<div id="footer" class="medium-10 columns small-centered"></div>
+
+</body>
+
+<script>
+    $(document).ready(function () {
+        $(document).foundation();
+    })
+    $("#header").load("head.html");
+    $("#left_bar").load("left_bar.html");
+    $("#footer").load("footer.html");
+</script>
+
+</html>
