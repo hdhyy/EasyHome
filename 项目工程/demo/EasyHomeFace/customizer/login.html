@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>易家家装设计系统登录</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/foundation/5.5.3/css/foundation.min.css">
+    <link rel="stylesheet" href="public/css/wide_screen.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/foundation/5.5.3/js/foundation.min.js"></script>
+    <script src="https://cdn.bootcss.com/foundation/5.5.3/js/vendor/modernizr.js"></script>
+</head>
+<body>
+<div class="row wideMode">
+    <div id="head" class="medium-12 columns small-centered"></div>
+    <div id="left_bar" class="medium-10 columns small-centered"></div>
+    <div class="medium-12 columns">
+        <div class="panel">
+            <h1>Foundation 页面</h1>
+            <p>重置窗口大小，查看效果！</p>
+            <button type="button" class="button small">我是按钮!</button>
+        </div>
+    </div>
+</div>
+
+<div class="row wideMode">
+    <div class="medium-4 columns">
+        <h3>菜鸟教程</h3>
+        <p>学的不仅是技术，更是梦想！！！</p>
+    </div>
+    <div class="medium-4 columns">
+        <h3>菜鸟教程</h3>
+        <p>学的不仅是技术，更是梦想！！！</p>
+    </div>
+    <div class="medium-4 columns">
+        <h3>菜鸟教程</h3>
+        <p>学的不仅是技术，更是梦想！！！</p>
+    </div>
+</div>
+</body>
+
+<script>
+    $(document).ready(function() {
+        $(document).foundation();
+    })
+    $("#head").load("head.html");
+    $("#left_bar").load("left_bar.html");
+</script>
+</html>
