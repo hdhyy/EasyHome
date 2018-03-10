@@ -11,3 +11,4 @@ API工具：swagger
 部署：nginx+uwsgi
 
 文档：word，visio，excel，ppt
+UI设计原则：salesforce，清晰，高效，统一

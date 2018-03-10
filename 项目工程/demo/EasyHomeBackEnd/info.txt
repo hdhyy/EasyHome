@@ -1,0 +1,5 @@
+changing port
+python manage.py runserver 8080
+
+python manage.py runserver 0:8080
+note:0 for 0.0.0.0
