@@ -1,0 +1,69 @@
+pip install django : 安装最新版本的django本地python的site-package目录中
+
+python -m django --version
+查看安装的django版本
+
+
+----------------------------------------------
+django-admin startproject mysite
+创建一个django标准工程
+目录类似：
+mysite/
+    manage.py
+    mysite/
+        __init__.py
+        settings.py
+        urls.py
+        wsgi.py
+
+-----------------------------------------------
+python manage.py runserver
+运行服务，访问本工程
+
+python manage.py startapp polls
+新建本工程的一个应用，应用可插拔，可在任何工程中使用
+目录类似：
+polls/
+    __init__.py
+    admin.py
+    apps.py
+    migrations/
+        __init__.py
+    models.py
+    tests.py
+    views.py
+
+python manage.py migrate
+进行数据库的设置的migrate，会创建根据setting来设定的表，一般是django需要的一些初始表
+主要根据INSTALLED_APPS生成
+
+python manage.py makemigrations polls
+创建model后，使得django知道去包含这个app
+
+python manage.py sqlmigrate polls 0001
+查看django将来会执行创建model表的一些sql语句，根据数据库不同而不太一样
+
+python manage.py check
+不migrations的情况下的一些问题检查
+
+python manage.py createsuperuser
+创建一个django的管理员账户
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
