@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50721
 File Encoding         : 65001
 
-Date: 2018-03-11 20:14:15
+Date: 2018-03-16 21:45:12
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -208,13 +208,14 @@ CREATE TABLE `django_admin_log` (
   KEY `django_admin_log_user_id_c564eba6_fk` (`user_id`),
   CONSTRAINT `django_admin_log_content_type_id_c4bce8eb_fk_django_co` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`),
   CONSTRAINT `django_admin_log_user_id_c564eba6_fk` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of django_admin_log
 -- ----------------------------
 INSERT INTO `django_admin_log` VALUES ('1', '2018-03-10 16:56:51.252782', '1', 'admin', '2', '[{\"changed\": {\"fields\": [\"first_name\", \"last_name\"]}}]', '2', '1');
 INSERT INTO `django_admin_log` VALUES ('2', '2018-03-10 17:03:35.419990', '1', 'What\'s up', '2', '[{\"changed\": {\"fields\": [\"pub_date\"]}}]', '8', '1');
+INSERT INTO `django_admin_log` VALUES ('3', '2018-03-12 05:56:46.588261', '1', 'What\'s up', '2', '[{\"changed\": {\"fields\": [\"pub_date\"]}}]', '8', '1');
 
 -- ----------------------------
 -- Table structure for django_content_type
@@ -384,13 +385,13 @@ CREATE TABLE `polls_choice` (
   PRIMARY KEY (`id`),
   KEY `polls_choice_question_id_c5b4b260_fk_polls_question_id` (`question_id`),
   CONSTRAINT `polls_choice_question_id_c5b4b260_fk_polls_question_id` FOREIGN KEY (`question_id`) REFERENCES `polls_question` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of polls_choice
 -- ----------------------------
-INSERT INTO `polls_choice` VALUES ('1', 'Not much', '0', '1');
-INSERT INTO `polls_choice` VALUES ('2', 'The sky', '0', '1');
+INSERT INTO `polls_choice` VALUES ('1', 'Not much', '15', '1');
+INSERT INTO `polls_choice` VALUES ('2', 'The sky', '6', '1');
 
 -- ----------------------------
 -- Table structure for polls_question
@@ -406,7 +407,7 @@ CREATE TABLE `polls_question` (
 -- ----------------------------
 -- Records of polls_question
 -- ----------------------------
-INSERT INTO `polls_question` VALUES ('1', 'What\'s up', '2018-03-10 17:03:34.000000');
+INSERT INTO `polls_question` VALUES ('1', 'What\'s up', '2018-03-10 05:56:44.000000');
 
 -- ----------------------------
 -- Table structure for post
@@ -453,7 +454,7 @@ DROP TABLE IF EXISTS `rolepermission`;
 CREATE TABLE `rolepermission` (
   `roleId` int(11) NOT NULL,
   `operationId` int(11) NOT NULL,
-  `valid` tinyint(4) DEFAULT NULL,
+  `valid` tinyint(4) NOT NULL,
   PRIMARY KEY (`roleId`,`operationId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

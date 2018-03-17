@@ -15,8 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from django.conf.urls import url
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('polls/',include('polls.urls')),
+    path('supervise/', include('supervise.urls')),
+    # 将 auth 应用中的 urls 模块包含进来
+    url(r'^supervise/', include('django.contrib.auth.urls')),
+    url(r'^$', views.index, name='index')
 ]
