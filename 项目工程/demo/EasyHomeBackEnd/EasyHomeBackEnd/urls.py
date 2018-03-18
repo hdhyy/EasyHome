@@ -22,7 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('polls/',include('polls.urls')),
     path('supervise/', include('supervise.urls')),
+    path('community/', include('community.urls')),
     # 将 auth 应用中的 urls 模块包含进来
-    url(r'^supervise/', include('django.contrib.auth.urls')),
+    path('supervise/', include('django.contrib.auth.urls')),
     url(r'^$', views.index, name='index')
 ]

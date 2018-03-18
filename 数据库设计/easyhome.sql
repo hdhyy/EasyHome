@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50721
 File Encoding         : 65001
 
-Date: 2018-03-16 21:45:12
+Date: 2018-03-17 14:24:46
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -191,6 +191,80 @@ CREATE TABLE `comment` (
 -- ----------------------------
 
 -- ----------------------------
+-- Table structure for community_category
+-- ----------------------------
+DROP TABLE IF EXISTS `community_category`;
+CREATE TABLE `community_category` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of community_category
+-- ----------------------------
+INSERT INTO `community_category` VALUES ('1', 'category test');
+
+-- ----------------------------
+-- Table structure for community_post
+-- ----------------------------
+DROP TABLE IF EXISTS `community_post`;
+CREATE TABLE `community_post` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(70) NOT NULL,
+  `body` longtext NOT NULL,
+  `created_time` datetime(6) NOT NULL,
+  `modified_time` datetime(6) NOT NULL,
+  `excerpt` varchar(200) NOT NULL,
+  `author_id` int(11) NOT NULL,
+  `category_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `community_post_author_id_a6c5f564_fk_supervise_user_id` (`author_id`),
+  KEY `community_post_category_id_40d6514d_fk_community_category_id` (`category_id`),
+  CONSTRAINT `community_post_author_id_a6c5f564_fk_supervise_user_id` FOREIGN KEY (`author_id`) REFERENCES `supervise_user` (`id`),
+  CONSTRAINT `community_post_category_id_40d6514d_fk_community_category_id` FOREIGN KEY (`category_id`) REFERENCES `community_category` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of community_post
+-- ----------------------------
+INSERT INTO `community_post` VALUES ('1', 'title test', 'body test', '2018-03-17 06:16:09.390443', '2018-03-17 06:16:09.390443', '', '3', '1');
+
+-- ----------------------------
+-- Table structure for community_post_tags
+-- ----------------------------
+DROP TABLE IF EXISTS `community_post_tags`;
+CREATE TABLE `community_post_tags` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `post_id` int(11) NOT NULL,
+  `tag_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `community_post_tags_post_id_tag_id_9d55619b_uniq` (`post_id`,`tag_id`),
+  KEY `community_post_tags_tag_id_4100f5ee_fk_community_tag_id` (`tag_id`),
+  CONSTRAINT `community_post_tags_post_id_c27e80a2_fk_community_post_id` FOREIGN KEY (`post_id`) REFERENCES `community_post` (`id`),
+  CONSTRAINT `community_post_tags_tag_id_4100f5ee_fk_community_tag_id` FOREIGN KEY (`tag_id`) REFERENCES `community_tag` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of community_post_tags
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for community_tag
+-- ----------------------------
+DROP TABLE IF EXISTS `community_tag`;
+CREATE TABLE `community_tag` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of community_tag
+-- ----------------------------
+INSERT INTO `community_tag` VALUES ('1', 'tag test');
+
+-- ----------------------------
 -- Table structure for django_admin_log
 -- ----------------------------
 DROP TABLE IF EXISTS `django_admin_log`;
@@ -227,7 +301,7 @@ CREATE TABLE `django_content_type` (
   `model` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `django_content_type_app_label_model_76bd3d3b_uniq` (`app_label`,`model`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of django_content_type
@@ -240,6 +314,7 @@ INSERT INTO `django_content_type` VALUES ('5', 'contenttypes', 'contenttype');
 INSERT INTO `django_content_type` VALUES ('7', 'polls', 'choice');
 INSERT INTO `django_content_type` VALUES ('8', 'polls', 'question');
 INSERT INTO `django_content_type` VALUES ('6', 'sessions', 'session');
+INSERT INTO `django_content_type` VALUES ('9', 'supervise', 'user');
 
 -- ----------------------------
 -- Table structure for django_migrations
@@ -287,7 +362,7 @@ CREATE TABLE `django_session` (
 -- ----------------------------
 -- Records of django_session
 -- ----------------------------
-INSERT INTO `django_session` VALUES ('u4snznhajiq44lfc7fsit4x29e0d971i', 'NzcxMDFmYjhlMjE0MzJlOTViZDAyYjA1ZTBhMWQzNzFjODZjM2QxODp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjEiLCJfYXV0aF91c2VyX2hhc2giOiJjYzA0ODkxNjdkNGM4OWE3MjQ0ODU5MDJlZTdiMTA0NDMxZWI4YTM3In0=', '2018-03-24 16:59:21.702629');
+INSERT INTO `django_session` VALUES ('n0t8lc2ev4hlqluhid1r3ppoi75t60e6', 'ZmM2ZGNhYjc5Nzk5MDY4NTUwYzhlODVjNGNlMmRjMWQ5ZWY3N2FmZTp7Il9hdXRoX3VzZXJfaGFzaCI6ImQxMzA1OWZhNmMzMmVjNzZmM2M2YmI1MTYxZDE3YmZjODM3MDJjMTUiLCJfYXV0aF91c2VyX2lkIjoiMiIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=', '2018-03-31 06:18:58.275376');
 
 -- ----------------------------
 -- Table structure for file
@@ -460,6 +535,105 @@ CREATE TABLE `rolepermission` (
 
 -- ----------------------------
 -- Records of rolepermission
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for supervise_accountinfo
+-- ----------------------------
+DROP TABLE IF EXISTS `supervise_accountinfo`;
+CREATE TABLE `supervise_accountinfo` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `supervise_accountinfo_user_id_f6d8a0d7_fk_supervise_user_id` (`user_id`),
+  CONSTRAINT `supervise_accountinfo_user_id_f6d8a0d7_fk_supervise_user_id` FOREIGN KEY (`user_id`) REFERENCES `supervise_user` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of supervise_accountinfo
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for supervise_personalinfo
+-- ----------------------------
+DROP TABLE IF EXISTS `supervise_personalinfo`;
+CREATE TABLE `supervise_personalinfo` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `supervise_personalinfo_user_id_f2012626_fk_supervise_user_id` (`user_id`),
+  CONSTRAINT `supervise_personalinfo_user_id_f2012626_fk_supervise_user_id` FOREIGN KEY (`user_id`) REFERENCES `supervise_user` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of supervise_personalinfo
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for supervise_user
+-- ----------------------------
+DROP TABLE IF EXISTS `supervise_user`;
+CREATE TABLE `supervise_user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `password` varchar(128) NOT NULL,
+  `last_login` datetime(6) DEFAULT NULL,
+  `is_superuser` tinyint(1) NOT NULL,
+  `username` varchar(150) NOT NULL,
+  `first_name` varchar(30) NOT NULL,
+  `last_name` varchar(150) NOT NULL,
+  `email` varchar(254) NOT NULL,
+  `is_staff` tinyint(1) NOT NULL,
+  `is_active` tinyint(1) NOT NULL,
+  `date_joined` datetime(6) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of supervise_user
+-- ----------------------------
+INSERT INTO `supervise_user` VALUES ('2', 'pbkdf2_sha256$100000$YaWl5cW1L5bd$1wJBckNi6WeOGlroILhwPZ3iKlgdUf8aZ7DSQ+G7nZg=', '2018-03-17 06:18:58.265386', '1', 'admin', '', '', 'fuyunhuayu@foxmail.com', '1', '1', '2018-03-16 13:55:32.258571', '');
+INSERT INTO `supervise_user` VALUES ('3', 'pbkdf2_sha256$100000$EeZvjmVVIJSN$2jSCc5zXQEvCNqq68z2H7cbBPrcQ8Ua3ni++ThjWThk=', null, '0', 'fuyunhuayu', '', '', '908795484@qq.com', '0', '1', '2018-03-17 01:55:57.371341', '');
+
+-- ----------------------------
+-- Table structure for supervise_user_groups
+-- ----------------------------
+DROP TABLE IF EXISTS `supervise_user_groups`;
+CREATE TABLE `supervise_user_groups` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `group_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `supervise_user_groups_user_id_group_id_a803da0e_uniq` (`user_id`,`group_id`),
+  KEY `supervise_user_groups_group_id_6d004326_fk_auth_group_id` (`group_id`),
+  CONSTRAINT `supervise_user_groups_group_id_6d004326_fk_auth_group_id` FOREIGN KEY (`group_id`) REFERENCES `auth_group` (`id`),
+  CONSTRAINT `supervise_user_groups_user_id_e26eb8c4_fk_supervise_user_id` FOREIGN KEY (`user_id`) REFERENCES `supervise_user` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of supervise_user_groups
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for supervise_user_user_permissions
+-- ----------------------------
+DROP TABLE IF EXISTS `supervise_user_user_permissions`;
+CREATE TABLE `supervise_user_user_permissions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `permission_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `supervise_user_user_perm_user_id_permission_id_207c599b_uniq` (`user_id`,`permission_id`),
+  KEY `supervise_user_user__permission_id_bba2e794_fk_auth_perm` (`permission_id`),
+  CONSTRAINT `supervise_user_user__permission_id_bba2e794_fk_auth_perm` FOREIGN KEY (`permission_id`) REFERENCES `auth_permission` (`id`),
+  CONSTRAINT `supervise_user_user__user_id_83996be0_fk_supervise` FOREIGN KEY (`user_id`) REFERENCES `supervise_user` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of supervise_user_user_permissions
 -- ----------------------------
 
 -- ----------------------------
