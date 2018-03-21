@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>
+        {% block title %}
+        {% endblock title %}
+    </title>
+    <link rel="stylesheet" href="https://unpkg.com/mobi.css/dist/mobi.min.css">
+    <link rel="stylesheet" href="{% static "supervise/css/supervise.css" %}">
+</head>
+<body class="{% block bodyclass %} {% endblock bodyclass %}">
+<div class="flex-center">
+    <div class="container">
+        <div class="flex-center">
+            {% block main %}
+            {% endblock main %}
+        </div>
+    </div>
+</div>
+</body>
+</html>

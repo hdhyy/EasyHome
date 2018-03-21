@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from django.conf.urls import url
+from community.feeds import AllPostsRssFeed
 from . import views
 
 urlpatterns = [
@@ -23,7 +24,9 @@ urlpatterns = [
     path('polls/',include('polls.urls')),
     path('supervise/', include('supervise.urls')),
     path('community/', include('community.urls')),
-    # 将 auth 应用中的 urls 模块包含进来
+    path('comments/', include('comments.urls')),
     path('supervise/', include('django.contrib.auth.urls')),
+    path('all/rss/', AllPostsRssFeed(), name='rss'),
+    path('search/', include('haystack.urls')),
     url(r'^$', views.index, name='index')
 ]

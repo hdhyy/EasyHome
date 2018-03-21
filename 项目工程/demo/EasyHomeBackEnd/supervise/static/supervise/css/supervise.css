@@ -1,0 +1,16 @@
+body.login {
+    background: white url("../images/login_background.png") no-repeat;
+}
+
+body.register {
+    background: white url("../images/register_background.png") no-repeat;
+}
+
+.errorlist {
+    color: red;
+}
+
+h3, label, span, li{
+    color: #faffef;
+}
+
