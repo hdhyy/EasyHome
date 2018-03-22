@@ -25,6 +25,7 @@ urlpatterns = [
     path('supervise/', include('supervise.urls')),
     path('community/', include('community.urls')),
     path('comments/', include('comments.urls')),
+    path('design/', include('design.urls')),
     path('supervise/', include('django.contrib.auth.urls')),
     path('all/rss/', AllPostsRssFeed(), name='rss'),
     path('search/', include('haystack.urls')),

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'supervise.apps.SuperviseConfig',
     'community.apps.CommunityConfig',
     'comments.apps.CommentsConfig',
+    'design.apps.DesignConfig',
     'haystack',
 ]
 

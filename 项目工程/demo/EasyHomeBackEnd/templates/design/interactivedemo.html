@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <meta charset=utf-8>
+    <title>My first three.js app</title>
+    <style>
+        body {
+            color: #808080;
+            font-family:Monospace;
+            font-size:13px;
+            text-align:center;
+
+            background-color: #000;
+            margin: 0px;
+            overflow: hidden;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%
+        }
+    </style>
+
+</head>
+<body>
+
+</body>
+<script src="{% static 'design/js/three.js' %}"></script>
+<script src="{% static 'design/js/Detector.js' %}"></script>
+<script src="{% static 'design/js/stats.min.js' %}"></script>
+<script src="{% static 'design/js/TransformControls.js' %}"></script>
+<script src="{% static 'design/js/TrackballControls.js' %}"></script>
+<script src="{% static 'design/js/myinteractive2.js' %}"></script>
+</html>

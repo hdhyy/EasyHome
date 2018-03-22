@@ -6,6 +6,19 @@ body.register {
     background: white url("../images/register_background.png") no-repeat;
 }
 
+.copyright {
+    text-align: center;
+    padding-top: 1em;
+    margin: 0;
+    border-top: 1px solid #eee;
+    color: #666;
+}
+
+#site-footer {
+    padding-top: 10px;
+    padding: 0 0 1.5em 0;
+}
+
 .errorlist {
     color: red;
 }
@@ -13,4 +26,5 @@ body.register {
 h3, label, span, li{
     color: #faffef;
 }
+
 

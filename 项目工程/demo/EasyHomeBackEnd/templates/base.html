@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="http://static.runoob.com/assets/foundation-icons/foundation-icons.css">
+    <link rel="stylesheet" href="{% static "supervise/css/foundation.min.css" %}">
+    <link rel="stylesheet" href="{% static "supervise/css/supervise.css" %}">
+    <script src="{% static "supervise/js/jquery.min.js" %}"></script>
+    <script src="{% static "supervise/js/foundation.min.js" %}"></script>
+    <script src="{% static "supervise/js/modernizr.js" %}"></script>
+
+    <style>
+        .row {
+            max-width: 100%;
+        }
+    </style>
+    <title>首页</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="medium-10 columns small-centered">
+            <div class="row">
+                <div class="medium-3 columns">
+                    <a href="{% url 'index' %}" class="th radius">
+                        <img src="{% static 'supervise/images/main_icon.png' %}" alt="easyhome" width="180"
+                             height="120">
+                    </a>
+                </div>
+                <div class="medium-4 columns">
+                    <div class="row">
+                        <div class="medium-1 columns"></div>
+                        <div class="medium-10 columns">
+                            <div style="text-align: right">
+                                <br/><br/><br/>
+                                {% if user.is_authenticated %}
+                                    你已登录，欢迎你：<i class="fi-torso"></i><a href="#">{{ user.username }}</a>
+                                    <span>&nbsp;</span>
+                                    <a href="{% url 'logout' %}?next={{ request.path }}" class="button tiny"
+                                       role="button">注销登录</a><span>&nbsp;&</span>
+                                    <a href="{% url 'password_change' %}?next={{ request.path }}"
+                                       class="button tiny"
+                                       role="button">修改密码</a>
+
+                                {% else %}
+                                    你还没有登录，请
+                                    <a href="{% url 'login' %}?next={{ request.path }} " class="button tiny"
+                                       role="button">登录</a>
+                                    或者
+                                    <a href="{% url 'supervise:register' %}" class="button tiny"
+                                       role="button">注册</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sticky">
+                <nav class="top-bar" data-topbar>
+                    <ul class="title-area">
+                        <li class="name">
+                            <!-- 如果你不需要标题或图标可以删掉它 -->
+                            <h1><a href="#">EasyHome</a></h1>
+                        </li>
+                        <!-- 小屏幕上折叠按钮: 去掉 .menu-icon 类，可以去除图标。
+                             如果需要只显示图片，可以删除 "Menu" 文本 -->
+                        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+                    </ul>
+                    <section class="top-bar-section">
+                        <ul class="right">
+                            <li class="active"><a href="#">主页</a></li>
+                            <li><a href="#">模型管理</a></li>
+                            <li><a href="#">作品管理</a></li>
+                            <li><a href="{% url 'community:index' %}">家装社区</a></li>
+                            <li><a href="{% url 'supervise:register' %}">我的信息</a></li>
+                        </ul>
+                    </section>
+                </nav>
+            </div>
+            {% block main %}
+            {% endblock main %}
+        </div>
+    </div>
+</div>
+
+<footer id="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="medium-8 columns small-centered">
+                <p class="copyright">&copy 2018 - from <a href="https://github.com/hdhyy/EasyHome" target="_blank" title="easyhome">easyhome</a>
+                    -- By <a href="https://github.com/hdhyy" title="template" target="_blank"> Hua Di </a>modify
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
