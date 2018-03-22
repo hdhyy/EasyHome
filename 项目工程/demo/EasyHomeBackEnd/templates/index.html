@@ -1,5 +1,25 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block main %}
-    <p>Huadi</p>
+    <div class="row">
+        <div class="medium-12 columns">
+            <div class="panel callout radius">
+                <button class="button" data-reveal-id="myModal">
+                    Click
+                </button>
+
+            </div>
+        </div>
+    </div>
+    <div id="myModal" class="reveal-modal" data-reveal>
+        <h2>基本设置</h2>
+        <p>户型选择</p>
+        <p>灯光模式</p>
+        <a href="{% url 'design:designface' %}" class="button" role="button">
+                进入设计
+        </a>
+        </button>
+        <a class="close-reveal-modal">&times;</a>
+    </div>
+
 {% endblock main %}
