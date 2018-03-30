@@ -3,55 +3,25 @@
 {% block main %}
     <div class="row">
         <div class="medium-12 columns">
-            <div class="row">
-                {% if model_list %}
-                    <ul class="small-block-grid-3">
-                        {% for model in model_list %}
-                            <li style="text-align: center">
-                                <div id="{{ model.file.url }}" class="modeldisplay"></div>
-                                <br/>
-                                <a href="{% url 'design:seeModel' model.id %}">{{ model.name }}
-                                </a>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                {% else %}
-                    <div class="row">
-                        <div class="medium-3 columns small-centered">
-                            No Models are available.You can add it by yourself.
-                        </div>
+            {% if model_list %}
+                <ul class="small-block-grid-3">
+                    {% for model in model_list %}
+                        <li style="text-align: center">
+                            <div id="{{ model.file.url }}" class="modeldisplay"></div>
+                            <br/>
+                            <a href="{% url 'design:seeModel' model.id %}">{{ model.name }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <div class="row">
+                    <div class="medium-4 columns small-centered">
+                        No Models are available.You can add it by yourself.
                     </div>
-                {% endif %}
-            </div>
-            <div class="row">
-                {% if is_paginated %}
-                    <div class="pagination">
-                        {% if first %}
-                            <a href="?page=1">1</a>
-                        {% endif %}
-                        {% if left %}
-                            {% if left_has_more %}
-                                <span>...</span>
-                            {% endif %}
-                            {% for i in left %}
-                                <a href="?page={{ i }}">{{ i }}</a>
-                            {% endfor %}
-                        {% endif %}
-                        <a class="current-page" href="?page={{ page_obj.number }}">{{ page_obj.number }}</a>
-                        {% if right %}
-                            {% for i in right %}
-                                <a href="?page={{ i }}">{{ i }}</a>
-                            {% endfor %}
-                            {% if right_has_more %}
-                                <span>...</span>
-                            {% endif %}
-                        {% endif %}
-                        {% if last %}
-                            <a href="?page={{ paginator.num_pages }}">{{ paginator.num_pages }}</a>
-                        {% endif %}
-                    </div>
-                {% endif %}
-            </div>
+                </div>
+            {% endif %}
+
         </div>
     </div>
 {% endblock main %}

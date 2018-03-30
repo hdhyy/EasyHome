@@ -1,10 +1,16 @@
 from django import forms
-from .models import Model
+from .models import Model, Texture
 
 
 class ModelsForm(forms.ModelForm):
     class Meta:
         model = Model
+        fields = ['name', 'file']
+
+
+class TexturesForm(forms.ModelForm):
+    class Meta:
+        model = Texture
         fields = ['name', 'file']
 
 

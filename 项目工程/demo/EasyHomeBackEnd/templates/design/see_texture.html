@@ -1,10 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block main %}
+
+    <div class="row">
+        <div class="medium-12 columns">
+            <div class="row">
+                <div class="medium-6 columns">
+                    <div class="medium-4 columns small-centered">
+                        <h4>{{ texture.name }}</h4>
+                    </div>
+                </div>
+                <div class="medium-6 columns">
+                    <div class="texturedetail">
+                        <img src="{{ texture.file.url }}" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock main %}

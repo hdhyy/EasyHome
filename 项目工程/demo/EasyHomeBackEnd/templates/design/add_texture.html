@@ -1,10 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block main %}
+    <div class="medium-6 columns small-centered">
+        <form action="{% url 'design:addTexture' %}" method="post" enctype="multipart/form-data">{% csrf_token %}
+            {{ form.as_table }}
+            <input type="submit" value="保存" class="button"/>
+        </form>
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+
+{% endblock main %}

@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.views.generic import DetailView, UpdateView
+from django.views.generic import DetailView, UpdateView, FormView
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse
@@ -39,24 +39,14 @@ def register(request):
         return render(request, 'supervise/register.html', context={'form': form, 'next': redirect_to})
 
 
-class UserDetailView(UpdateView):
-    form_class = UpdateUserForm
+class UserDetailView(DetailView):
+
+    model = User
     template_name = 'supervise/my_info.html'
-    template_name_suffix = '_update_form'
+    context_object_name = 'user'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['accountInfo'] = AccountInfo.objects.filter(user_id=self.kwargs['pk'])
         context['personalInfo'] = PersonalInfo.objects.filter(user_id=self.kwargs['pk'])
         return context
-
-    def get_queryset(self):
-        return User.objects.filter(id=self.kwargs['pk'])
-
-    def form_valid(self, form):
-        form.save()
-        return self.get_success_url()
-
-    def get_success_url(self):
-        messages.success(self.request, 'User Updated Successfully')
-        return HttpResponseRedirect(reverse('design:thanks'))

@@ -1,10 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block main %}
+    <div class="row">
+        <div class="medium-12 columns">
+            {% if texture_list %}
+                <ul class="small-block-grid-3">
+                    {% for texture in texture_list %}
+                        <li style="text-align: center">
+                            <div id="{{ texture.file.url }}" class="texturedisplay">
+                                <img src="{{ texture.file.url }}" />
+                            </div>
+                            <br/>
+                            <a href="{% url 'design:seeTexture' texture.id %}">{{ texture.name }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <div class="row">
+                    <div class="medium-2 columns small-centered">
+                        No Textures are available.You can add it by yourself.
+                    </div>
+                </div>
+            {% endif %}
+
+        </div>
+    </div>
+{% endblock main %}

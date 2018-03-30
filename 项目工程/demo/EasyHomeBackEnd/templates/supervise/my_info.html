@@ -5,11 +5,9 @@
         <div class="medium-12 columns">
             <div class="row">
                 <div class="medium-6 columns">
-                    <img src="/{{ form.avatar.url }}" />
-                    <form action="{% url 'supervise:myinfo' user.id %}" method="post" enctype="multipart/form-data">{% csrf_token %}
-                        {{ form.as_table }}
-                        <input type="submit" value="提交" class="button"/>
-                    </form>
+                        <img src="{{ user.avatar.url }}"/>
+
+
                 </div>
                 <div class="medium-6 columns">
 

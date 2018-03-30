@@ -1,21 +1,19 @@
 var canvases = document.getElementsByClassName('modeldisplay');
 var width = parseInt($(canvases[0]).css('width'));
 var height = parseInt($(canvases[0]).css('height'));
-var renderer;
 var container;
 var aspect = width / height;
 var mouse = new THREE.Vector2();
 
-function initThree() {
+function initThree(renderer) {
 
-    renderer = new THREE.WebGLRenderer({antialias: true});
     renderer.setSize(width, height);
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.autoClear = false;
 
 }
 
-function initCanvas(element) {
+function initCanvas(element, renderer) {
     container = element;
     container.appendChild(renderer.domElement);
 }
@@ -43,16 +41,13 @@ function initCamera() {
     controls.dynamicDampingFactor = 0.3;
 }
 
-var scene;
-
-function initScene() {
-    scene = new THREE.Scene();
+function initScene(scene) {
     scene.background = new THREE.Color(0xf0f0f0);
 }
 
 var light;
 
-function initLight() {
+function initLight(scene) {
     /* we need to add a light so we can see our cube - its almost
        as if we're turning on a lightbulb within the room */
     light = new THREE.PointLight(0xFFFFFF);
@@ -67,7 +62,7 @@ function initLight() {
 
 var manager;
 
-function initLoader(path) {
+function initLoader(path, scene) {
     manager = new THREE.LoadingManager();
     manager.onProgress = function (item, loaded, total) {
         console.log(item, loaded, total);
@@ -105,15 +100,20 @@ function initLoader(path) {
 
 var cube;
 
-function initObject() {
+function initObject(scene) {
     var cubegeometry = new THREE.BoxGeometry(20, 20, 20);
     var material = new THREE.MeshLambertMaterial({color: Math.random() * 0xffffff});
     cube = new THREE.Mesh(cubegeometry, material);
     scene.add(cube);
 
     var helper = new THREE.GridHelper(1200, 60, 0xFF4444, 0x404040);
-    this.scene.add(helper);
+    scene.add(helper);
 }
+
+var len = canvases.length;
+
+var renderers = new Array(len);
+var scenes = new Array(len);
 
 function animate() {
 
@@ -125,8 +125,13 @@ function render() {
 
     camera.updateMatrixWorld();
     controls.update();
-    renderer.clear();
-    renderer.render(scene, camera);
+    for (var i = 0; i < len; i++) {
+        if (renderers[i]) {
+            renderers[i].clear();
+            renderers[i].render(scenes[i], camera);
+        }
+    }
+
 }
 
 
@@ -153,16 +158,19 @@ function onDocumentMouseMove(event) {
 
 }
 
-var len = canvases.length;
-
-for (var i = 0; i < len; i++) {
-    initThree();
-    initCanvas(canvases[i]);
-    initScene();
+if(len > 0){
+    for (var i = 0; i < len; i++) {
+    renderers[i] = new THREE.WebGLRenderer({antialias: true});
+    initThree(renderers[i]);
+    initCanvas(canvases[i], renderers[i]);
+    scenes[i] = new THREE.Scene();
+    initScene(scenes[i]);
     initCamera();
-    initLight();
-    initLoader(canvases[i].id);
-    initObject();
+    initLight(scenes[i]);
+    initLoader(canvases[i].id, scenes[i]);
+    initObject(scenes[i]);
     addEvents();
     animate();
 }
+}
+
