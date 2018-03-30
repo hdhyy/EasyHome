@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'community.apps.CommunityConfig',
     'comments.apps.CommentsConfig',
     'design.apps.DesignConfig',
+    'files.apps.FilesConfig',
     'haystack',
 ]
 
@@ -143,8 +144,13 @@ AUTH_USER_MODEL = 'supervise.User'
 LANGUAGE_CODE = 'zh-hans'
 TIME_ZONE = 'Asia/Shanghai'
 
+# 文件上传
+MEDIA_ROOT = os.path.join(BASE_DIR, 'upload/')
+MEDIA_URL = '/upload/'  # 这个是在浏览器上访问该上传文件的url的前缀
+
 # 登录注销流程
 LOGOUT_REDIRECT_URL = '/'
 LOGIN_REDIRECT_URL = '/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+

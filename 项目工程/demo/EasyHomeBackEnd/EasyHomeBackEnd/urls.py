@@ -15,19 +15,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from django.conf.urls import url
+from django.conf import settings
+from django.conf.urls.static import static
 from community.feeds import AllPostsRssFeed
 from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('polls/',include('polls.urls')),
-    path('supervise/', include('supervise.urls')),
-    path('community/', include('community.urls')),
-    path('comments/', include('comments.urls')),
-    path('design/', include('design.urls')),
-    path('supervise/', include('django.contrib.auth.urls')),
-    path('all/rss/', AllPostsRssFeed(), name='rss'),
-    path('search/', include('haystack.urls')),
-    url(r'^$', views.index, name='index')
-]
+                  path('admin/', admin.site.urls),
+                  path('polls/', include('polls.urls')),
+                  path('supervise/', include('supervise.urls')),
+                  path('community/', include('community.urls')),
+                  path('comments/', include('comments.urls')),
+                  path('design/', include('design.urls')),
+                  path('supervise/', include('django.contrib.auth.urls')),
+                  path('all/rss/', AllPostsRssFeed(), name='rss'),
+                  path('search/', include('haystack.urls')),
+                  path('', views.index, name='index')
+              ]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

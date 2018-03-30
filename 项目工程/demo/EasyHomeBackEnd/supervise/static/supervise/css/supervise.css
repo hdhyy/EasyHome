@@ -6,6 +6,18 @@ body.register {
     background: white url("../images/register_background.png") no-repeat;
 }
 
+
+#designentrance {
+    background: pink url("../images/mainpage.png") no-repeat;
+    height: 700px;
+    width: 100%;
+}
+
+.modeldisplay {
+    width: 100%;
+    height: 250px;
+}
+
 .copyright {
     text-align: center;
     padding-top: 1em;
@@ -26,5 +38,6 @@ body.register {
 h3, label, span, li{
     color: #faffef;
 }
+
 
 

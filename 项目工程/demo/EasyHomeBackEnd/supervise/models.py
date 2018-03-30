@@ -1,15 +1,21 @@
 from django.db import models
+from django.conf import settings
 from django.contrib.auth.models import AbstractUser
 
 
+def upload_to(instance, filename):
+    return '/'.join(['user', instance.nickname, filename])
+
+
 class User(AbstractUser):
-    name = models.CharField(max_length=20,blank=True)
+    nickname = models.CharField(max_length=20,blank=True)
+    avatar = models.ImageField(upload_to=upload_to)
 
     class Meta(AbstractUser.Meta):
         pass
 
     def __str__(self):
-        return self.name
+        return self.nickname
 
 
 class AccountInfo(models.Model):

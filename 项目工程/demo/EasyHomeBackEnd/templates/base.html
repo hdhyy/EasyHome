@@ -19,7 +19,7 @@
     </style>
     <title>首页</title>
 </head>
-<body>
+<body class="main">
 <div class="container">
     <div class="row">
         <div class="medium-10 columns small-centered">
@@ -33,11 +33,11 @@
                 <div class="medium-4 columns">
                     <div class="row">
                         <div class="medium-1 columns"></div>
-                        <div class="medium-10 columns">
+                        <div class="medium-11 columns">
                             <div style="text-align: right">
                                 <br/><br/><br/>
                                 {% if user.is_authenticated %}
-                                    你已登录，欢迎你：<i class="fi-torso"></i><a href="#">{{ user.username }}</a>
+                                    你已登录，欢迎你: <i class="fi-torso"></i><a href="#"> {{ user.username }} </a>
                                     <span>&nbsp;</span>
                                     <a href="{% url 'logout' %}?next={{ request.path }}" class="button tiny"
                                        role="button">注销登录</a><span>&nbsp;&</span>
@@ -46,7 +46,7 @@
                                        role="button">修改密码</a>
 
                                 {% else %}
-                                    你还没有登录，请
+                                    你还未登录，请
                                     <a href="{% url 'login' %}?next={{ request.path }} " class="button tiny"
                                        role="button">登录</a>
                                     或者
@@ -72,11 +72,16 @@
                     </ul>
                     <section class="top-bar-section">
                         <ul class="right">
-                            <li class="active"><a href="#">主页</a></li>
-                            <li><a href="#">模型管理</a></li>
-                            <li><a href="#">作品管理</a></li>
+                            <li class="active"><a href="{% url 'index' %}">主页</a></li>
+                            {% if user.is_authenticated %}
+                                <li><a href="{% url 'design:listModel' user.id %}">模型管理</a></li>
+                                <li><a href="#">纹理管理</a></li>
+                                <li><a href="#">作品管理</a></li>
+                                <li><a href="{% url 'supervise:myinfo' user.id %}">我的信息</a></li>
+                            {% else %}
+                            {% endif %}
                             <li><a href="{% url 'community:index' %}">家装社区</a></li>
-                            <li><a href="{% url 'supervise:register' %}">我的信息</a></li>
+
                         </ul>
                     </section>
                 </nav>
@@ -105,5 +110,12 @@
         $(document).foundation();
     })
 </script>
+<script src="{% static 'design/js/three.js' %}"></script>
+<script src="{% static 'design/js/Detector.js' %}"></script>
+<script src="{% static 'design/js/stats.min.js' %}"></script>
+<script src="{% static 'design/js/TransformControls.js' %}"></script>
+<script src="{% static 'design/js/TrackballControls.js' %}"></script>
+<script src="{% static 'design/js/loaders/OBJLoader.js' %}"></script>
+<script src="{% static 'design/myjs/listModelTest.js' %}"></script>
 </body>
 </html>

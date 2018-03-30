@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    <div class="medium-6 columns small-centered">
+        <form action="{% url 'design:addModel' %}" method="post" enctype="multipart/form-data">{% csrf_token %}
+            {{ form.as_table }}
+            <input type="submit" value="保存" class="button"/>
+        </form>
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+
+{% endblock main %}
