@@ -31,14 +31,14 @@ function initCamera() {
     camera.up.z = 0;
     camera.lookAt(new THREE.Vector3(0, 0, 0));
 
-    controls = new THREE.TrackballControls(camera);
-    controls.rotateSpeed = 1.0;
-    controls.zoomSpeed = 1.2;
-    controls.panSpeed = 0.8;
-    controls.noZoom = false;
-    controls.noPan = false;
-    controls.staticMoving = true;
-    controls.dynamicDampingFactor = 0.3;
+    //controls = new THREE.TrackballControls(camera);
+    // controls.rotateSpeed = 1.0;
+    // controls.zoomSpeed = 1.2;
+    // controls.panSpeed = 0.8;
+    // controls.noZoom = false;
+    // controls.noPan = false;
+    // controls.staticMoving = true;
+    // controls.dynamicDampingFactor = 0.3;
 }
 
 function initScene(scene) {
@@ -104,10 +104,10 @@ function initObject(scene) {
     var cubegeometry = new THREE.BoxGeometry(20, 20, 20);
     var material = new THREE.MeshLambertMaterial({color: Math.random() * 0xffffff});
     cube = new THREE.Mesh(cubegeometry, material);
-    scene.add(cube);
+    //scene.add(cube);
 
     var helper = new THREE.GridHelper(1200, 60, 0xFF4444, 0x404040);
-    scene.add(helper);
+    //scene.add(helper);
 }
 
 var len = canvases.length;
@@ -124,7 +124,7 @@ function animate() {
 function render() {
 
     camera.updateMatrixWorld();
-    controls.update();
+    //controls.update();
     for (var i = 0; i < len; i++) {
         if (renderers[i]) {
             renderers[i].clear();
@@ -169,7 +169,7 @@ if(len > 0){
     initLight(scenes[i]);
     initLoader(canvases[i].id, scenes[i]);
     initObject(scenes[i]);
-    addEvents();
+    //addEvents();
     animate();
 }
 }

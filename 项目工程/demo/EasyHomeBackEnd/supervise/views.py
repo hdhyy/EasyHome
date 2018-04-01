@@ -47,6 +47,8 @@ class UserDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['accountInfo'] = AccountInfo.objects.filter(user_id=self.kwargs['pk'])
-        context['personalInfo'] = PersonalInfo.objects.filter(user_id=self.kwargs['pk'])
+
+        context['accountInfo'] = AccountInfo.objects.filter(user_id=self.kwargs['pk']).first()
+        context['personalInfo'] = PersonalInfo.objects.filter(user_id=self.kwargs['pk']).first()
+        print(context)
         return context

@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
-
+{% load staticfiles %}
 {% block main %}
+    <div class="row">
+        <div class="medium-12 columns">
+            <a href="{% url 'design:addModel' %}" class="button tiny right">添加我的模型</a>
+        </div>
+    </div>
     <div class="row">
         <div class="medium-12 columns">
             {% if model_list %}
@@ -25,3 +30,11 @@
         </div>
     </div>
 {% endblock main %}
+
+{% block jsfiles %}
+    <script src="{% static 'design/js/three.js' %}"></script>
+    <script src="{% static 'design/js/Detector.js' %}"></script>
+    <script src="{% static 'design/js/stats.min.js' %}"></script>
+    <script src="{% static 'design/js/loaders/OBJLoader.js' %}"></script>
+    <script src="{% static 'design/myjs/listModelTest.js' %}"></script>
+{% endblock jsfiles %}

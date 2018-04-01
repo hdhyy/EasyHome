@@ -160,4 +160,4 @@ def handle_uploaded_file(file):
 
 
 def designface(request):
-    return render(request, 'design/interactivedemo.html')
+    return render(request, 'design/design.html')

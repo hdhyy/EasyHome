@@ -3,14 +3,51 @@
 {% block main %}
     <div class="row">
         <div class="medium-12 columns">
+            <a href="#" class="button tiny right">修改我的信息</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="medium-12 columns">
             <div class="row">
-                <div class="medium-6 columns">
-                        <img src="{{ user.avatar.url }}"/>
+                <div class="medium-6 columns" data-equalizer="first">
+                    <div class="row">
+                        <div class="medium-6 columns small-centered">
+                            <h4>用户个人信息</h4><br/>
+                            <strong>头像</strong>
+                            <img src="{{ user.avatar.url }}" width="250" height="250" class="right"/>
+                            <br/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="medium-6 columns small-centered">
+                            <strong>姓名</strong>
+                            {{ user.get_full_name }}
+                            <br/>
+                            <strong>用户名</strong>
+                            {{ user.username }}
+                            <br/>
+                            <strong>邮箱</strong>
+                            {{ user.email }}
+                            <br/>
+                            <strong>年龄</strong>
+                            {{ personalInfo.age }}
+                            <br/>
+                            <strong>职业</strong>
+                            {{ personalInfo.career }}
+                        </div>
+                    </div>
 
 
                 </div>
-                <div class="medium-6 columns">
+                <div class="medium-6 columns" data-equalizer="first">
+                    <div class="row">
+                        <div class="medium-6 columns small-centered">
+                            <h4>用户账户信息</h4><br/>
+                            <strong>账户名称:{{ accountInfo.name }}</strong>
 
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>

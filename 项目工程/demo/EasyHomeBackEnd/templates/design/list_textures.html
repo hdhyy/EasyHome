@@ -3,12 +3,17 @@
 {% block main %}
     <div class="row">
         <div class="medium-12 columns">
+            <a href="{% url 'design:addTexture' %}" class="button tiny right">添加我的纹理</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="medium-12 columns">
             {% if texture_list %}
                 <ul class="small-block-grid-3">
                     {% for texture in texture_list %}
                         <li style="text-align: center">
                             <div id="{{ texture.file.url }}" class="texturedisplay">
-                                <img src="{{ texture.file.url }}" />
+                                <img src="{{ texture.file.url }}" width="270" height="270"/>
                             </div>
                             <br/>
                             <a href="{% url 'design:seeTexture' texture.id %}">{{ texture.name }}

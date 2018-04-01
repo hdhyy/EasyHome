@@ -141,12 +141,7 @@
         $(document).foundation();
     })
 </script>
-<script src="{% static 'design/js/three.js' %}"></script>
-<script src="{% static 'design/js/Detector.js' %}"></script>
-<script src="{% static 'design/js/stats.min.js' %}"></script>
-<script src="{% static 'design/js/TransformControls.js' %}"></script>
-<script src="{% static 'design/js/TrackballControls.js' %}"></script>
-<script src="{% static 'design/js/loaders/OBJLoader.js' %}"></script>
-<script src="{% static 'design/myjs/listModelTest.js' %}"></script>
+{% block jsfiles %}
+{% endblock jsfiles %}
 </body>
 </html>
