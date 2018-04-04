@@ -100,7 +100,7 @@ Editor.prototype = {
 
 	setTheme: function ( value ) {
 
-		document.getElementById( 'theme' ).href = value;
+		document.getElementById( 'theme' ).href = '/static/design/'+value;
 
 		this.signals.themeChanged.dispatch( value );
 
