@@ -4,7 +4,7 @@ from supervise.models import User
 
 
 def upload_to(instance, filename):
-    return '/'.join(['model', instance.name, filename])
+    return '/'.join([str(instance.getdicname()), instance.name, filename])
 
 
 class Model(models.Model):
@@ -13,12 +13,18 @@ class Model(models.Model):
     upload_time = models.DateTimeField(auto_now_add=True)
     file = models.FileField(upload_to=upload_to)
 
+    def getdicname(self):
+        return 'model'
+
 
 class Texture(models.Model):
     name = models.CharField(max_length=20)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     upload_time = models.DateTimeField(auto_now_add=True)
     file = models.FileField(upload_to=upload_to)
+
+    def getdicname(self):
+        return 'texture'
 
 
 class Work(models.Model):
@@ -27,3 +33,18 @@ class Work(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     browseNum = models.IntegerField(default=0)
     file = models.FileField(upload_to=upload_to)
+
+    def getdicname(self):
+        return 'work'
+
+
+class IndoorType(models.Model):
+    name = models.CharField(max_length=20)
+    room = models.IntegerField(default=0)
+    office = models.IntegerField(default=0)
+    kitchen = models.IntegerField(default=0)
+    bathroom = models.IntegerField(default=0)
+    file = models.FileField(upload_to=upload_to)
+
+    def getdicname(self):
+        return 'indoorType'

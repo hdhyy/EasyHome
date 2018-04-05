@@ -64,13 +64,13 @@ var objloaderapp = (function () {
     };
 
     objloaderapp.prototype.initHelper = function () {
-        //var helper = new THREE.GridHelper(1200, 60, 0xFF4444, 0x404040);
-        //this.scene.add(helper);
+        var helper = new THREE.GridHelper(1200, 60, 0xFF4444, 0x404040);
+        this.scene.add(helper);
 
         var grid = new THREE.GridHelper(2000, 20, 0x000000, 0x000000);
         grid.material.opacity = 0.2;
         grid.material.transparent = true;
-        this.scene.add(grid);
+        //this.scene.add(grid);
     };
 
     objloaderapp.prototype.initObject = function () {
@@ -81,7 +81,7 @@ var objloaderapp = (function () {
         }));
         mesh.rotation.x = -Math.PI / 2;
         mesh.receiveShadow = true;
-        this.scene.add(mesh);
+        //this.scene.add(mesh);
     };
 
     objloaderapp.prototype.initContent = function () {

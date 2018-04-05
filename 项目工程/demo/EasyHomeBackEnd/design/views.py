@@ -4,7 +4,7 @@ from django.urls import reverse
 from django.http import HttpResponseRedirect, HttpResponse
 from django.views.generic import ListView, DetailView, FormView, CreateView, TemplateView
 from .forms import UploadFileForm, ModelsForm, TexturesForm
-from .models import Model, Texture
+from .models import Model, Texture,IndoorType
 
 
 class ThanksView(TemplateView):
@@ -110,9 +110,9 @@ class TextureListView(PaginationListView):
 
     def get_queryset(self):
         if self.kwargs:
-            return Texture.objects.filter(user_id=self.kwargs['user_id'])
+            return Texture.objects.filter(user_id=self.kwargs['user_id']).order_by('id')
         else:
-            return Texture.objects.all()
+            return Texture.objects.all().order_by('id')
 
 
 class ModelDetailView(DetailView):
@@ -137,9 +137,9 @@ class ModelListView(PaginationListView):
 
     def get_queryset(self):
         if self.kwargs:
-            return Model.objects.filter(user_id=self.kwargs['user_id'])
+            return Model.objects.filter(user_id=self.kwargs['user_id']).order_by('id')
         else:
-            return Model.objects.all()
+            return Model.objects.all().order_by('id')
 
 
 def upload_file(request):
@@ -161,3 +161,9 @@ def handle_uploaded_file(file):
 
 def designface(request):
     return render(request, 'design/design.html')
+
+
+class DesignFaceView(DetailView):
+    template_name = 'design/design.html'
+    model = IndoorType
+    context_object_name = 'indoortype'

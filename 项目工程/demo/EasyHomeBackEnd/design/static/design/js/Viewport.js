@@ -524,6 +524,7 @@ var Viewport = function ( editor ) {
 
 		renderer.render( scene, camera );
 
+
 		if ( renderer instanceof THREE.RaytracingRenderer === false ) {
 
 			renderer.render( sceneHelpers, camera );
