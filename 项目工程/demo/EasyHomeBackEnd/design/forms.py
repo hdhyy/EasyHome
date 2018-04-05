@@ -1,5 +1,5 @@
 from django import forms
-from .models import Model, Texture
+from .models import Model, Texture, Work
 
 
 class ModelsForm(forms.ModelForm):
@@ -11,6 +11,12 @@ class ModelsForm(forms.ModelForm):
 class TexturesForm(forms.ModelForm):
     class Meta:
         model = Texture
+        fields = ['name', 'file']
+
+
+class WorksForm(forms.ModelForm):
+    class Meta:
+        model = Work
         fields = ['name', 'file']
 
 

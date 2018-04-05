@@ -20,6 +20,12 @@ class IndexView(ListView):
     # 指定 paginate_by 属性后开启分页功能，其值代表每一页包含多少篇文章
     paginate_by = 3
 
+    def get_queryset(self):
+        if self.kwargs:
+            return Post.objects.filter(author_id=self.kwargs['user_id']).order_by('id')
+        else:
+            return Post.objects.all().order_by('id')
+
     def get_context_data(self, **kwargs):
         """
         在视图函数中将模板变量传递给模板是通过给 render 函数的 context 参数传递一个字典实现的，

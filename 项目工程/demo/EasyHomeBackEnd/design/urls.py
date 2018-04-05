@@ -13,4 +13,8 @@ urlpatterns = [
     path('textures/add/', views.TextureAddView.as_view(), name='addTexture'),
     path('textures/list/<int:user_id>', views.TextureListView.as_view(), name='listTexture'),
     path('textures/<int:pk>/', views.TextureDetailView.as_view(), name='seeTexture'),
+
+    path('works/add/', views.WorkAddView.as_view(), name='addWork'),
+    path('works/list/<int:user_id>', views.WorkListView.as_view(), name='listWork'),
+    path('works/<int:pk>/', views.WorkDetailView.as_view(), name='seeWork'),
 ]

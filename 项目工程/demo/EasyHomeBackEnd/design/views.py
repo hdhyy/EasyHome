@@ -3,8 +3,8 @@ from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.http import HttpResponseRedirect, HttpResponse
 from django.views.generic import ListView, DetailView, FormView, CreateView, TemplateView
-from .forms import UploadFileForm, ModelsForm, TexturesForm
-from .models import Model, Texture,IndoorType
+from .forms import UploadFileForm, ModelsForm, TexturesForm, WorksForm
+from .models import Model, Texture, Work, IndoorType
 
 
 class ThanksView(TemplateView):
@@ -167,3 +167,40 @@ class DesignFaceView(DetailView):
     template_name = 'design/design.html'
     model = IndoorType
     context_object_name = 'indoortype'
+
+
+class WorkAddView(FormView):
+    form_class = WorksForm
+    template_name = 'design/add_work.html'
+    success_url = '/thanks'
+
+    def form_invalid(self, form):  # 定义表对象没有添加失败后跳转到的页面。
+        return HttpResponse("form is invalid.. this is just an HttpResponse object")
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        form.save()
+        return self.get_success_url()
+
+    def get_success_url(self):
+        messages.success(self.request, 'Work Added Successfully')
+        return HttpResponseRedirect(reverse('design:thanks'))
+
+
+class WorkListView(PaginationListView):
+    module = Work
+    template_name = 'design/list_works.html'
+    context_object_name = "work_list"
+
+    def get_queryset(self):
+        if self.kwargs:
+            return Work.objects.filter(user_id=self.kwargs['user_id']).order_by('id')
+        else:
+            return Work.objects.all().order_by('id')
+
+
+class WorkDetailView(DetailView):
+    model = Work
+    template_name = 'design/see_work.html'
+
+

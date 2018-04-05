@@ -76,11 +76,12 @@
                             {% if user.is_authenticated %}
                                 <li><a href="{% url 'design:listModel' user.id %}">模型管理</a></li>
                                 <li><a href="{% url 'design:listTexture' user.id %}">纹理管理</a></li>
-                                <li><a href="#">作品管理</a></li>
+                                <li><a href="{% url 'design:listWork' user.id %}">作品管理</a></li>
                                 <li><a href="{% url 'supervise:myinfo' user.id %}">我的信息</a></li>
+                                <li><a href="{% url 'community:index' user.id %}">家装社区</a></li>
                             {% else %}
+                                <li><a href="{% url 'community:indexT' %}">家装社区</a></li>
                             {% endif %}
-                            <li><a href="{% url 'community:index' %}">家装社区</a></li>
 
                         </ul>
                     </section>

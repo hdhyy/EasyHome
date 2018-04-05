@@ -227,7 +227,14 @@
 				} );
 
 				//
-                editor.loader.loadFile( '{{ indoortype.file.url }}' );
+				var objectLoader = new THREE.ObjectLoader();
+				objectLoader.load('{{ indoortype.file.url }}', function ( obj ) {
+                    if ( obj instanceof THREE.Scene ) {
+					    editor.execute( new SetSceneCommand( obj ) );
+				    } else {
+					    editor.execute( new AddObjectCommand( obj ) );
+				    }
+				} );
 				var timeout;
 
 				function saveState( scene ) {
