@@ -18,16 +18,59 @@
     <div id="myModal" class="reveal-modal" data-reveal>
         <h2>基本设置</h2>
         <p>户型选择</p>
-        <select>
+        <select id="indoortype_selection">
             {% for indoortype in indoortype_list %}
-                <option value="{{ indoortype.id }}">{{ indoortype.name }}</option>
+                <option value="{{ indoortype.file.url }}">{{ indoortype.name }}</option>
             {% endfor %}
         </select>
-        <a href="{% url 'design:designface' 1%}" class="button" role="button">
-            进入设计
-        </a>
+
+        <canvas id="indoortype_display" width="940" height="400"></canvas>
+
+        <div class="medium-12 small-centered">
+            <div class="row">
+                <div class="medium-2 columns small-centered">
+                    <br/>
+                    <a href="{% url 'design:designface' 1 %}" class="button small" role="button">
+                        进入设计
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
         </button>
         <a class="close-reveal-modal">&times;</a>
     </div>
 
 {% endblock main %}
+
+{% block jsfiles %}
+    <script src="{% static 'design/js/three.js' %}"></script>
+    <script src="{% static 'design/js/controls/TrackballControls.js' %}"></script>
+    <script src="{% static 'design/myjs/jsonloaderapp.js' %}"></script>
+    <script>
+        $("#indoortype_selection").change(function () {
+            var url = document.getElementById("indoortype_selection").value;
+            var canvas = document.getElementById("indoortype_display");
+            var app = new objloaderapp(canvas, url);
+            var resizeWindow = function () {
+                app.resizeDisplayGL();
+            };
+            var render = function () {
+                requestAnimationFrame(render);
+                app.render();
+            };
+            window.addEventListener('resize', resizeWindow, false);
+            app.initThree();
+            app.initScene();
+            app.initCamera();
+            app.initLight();
+            app.initHelper();
+            app.initControls();
+            app.initObject();
+            app.resizeDisplayGL();
+            app.initContent();
+            render();
+        });
+    </script>
+{% endblock jsfiles %}
