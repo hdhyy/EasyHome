@@ -47,12 +47,7 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
                             <li class="cl-effect-11"><a href="{% url 'community:indexT' %}" data-hover="首页">首页</a></li>
-                            <li class="cl-effect-11"><a href="../../community/static/community/full-width.html"
-                                                        data-hover="博客">博客</a></li>
-                            <li class="cl-effect-11"><a href="../../community/static/community/about.html"
-                                                        data-hover="关于">关于</a></li>
-                            <li class="cl-effect-11"><a href="../../community/static/community/contact.html"
-                                                        data-hover="联系">联系</a></li>
+                            <li class="cl-effect-11"><a href="{% url 'index' %}" data-hover="返回">返回</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </nav>
@@ -69,8 +64,6 @@
         </div>
     </header>
 </div>
-<div class="copyrights">Collect from <a href="http://www.cssmoban.com/">网页模板</a></div>
-<div class="copyrights">Modified by <a href="http://zmrenwu.com/">追梦人物的博客</a></div>
 
 <div class="content-body">
     <div class="container">
@@ -83,7 +76,7 @@
                 {% block toc %}
                 {% endblock toc %}
                 <div class="widget widget-recent-posts">
-                    <h3 class="widget-title">最新文章</h3>
+                    <h3 class="widget-title">最新帖子</h3>
                     {% get_recent_posts as recent_post_list %}
                     <ul>
                         {% for post in recent_post_list %}
@@ -91,7 +84,7 @@
                                 <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
                             </li>
                         {% empty %}
-                            暂无文章！
+                            暂无帖子！
                         {% endfor %}
                     </ul>
                 </div>
@@ -166,10 +159,8 @@
     <button type="button" class="overlay-close"><span class="ion-ios-close-empty"></span></button>
     <nav>
         <ul>
-            <li><a href="index.html">首页</a></li>
-            <li><a href="../../community/static/community/full-width.html">博客</a></li>
-            <li><a href="../../community/static/community/about.html">关于</a></li>
-            <li><a href="../../community/static/community/contact.html">联系</a></li>
+            <li><a href="{% url 'community:indexT' %}">首页</a></li>
+            <li><a href="{% url 'index' %}">返回</a></li>
         </ul>
     </nav>
 </div>

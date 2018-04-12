@@ -21,7 +21,7 @@ class IndexView(ListView):
     paginate_by = 3
 
     def get_queryset(self):
-        if self.kwargs:
+        if 'user_id' in self.kwargs:
             return Post.objects.filter(author_id=self.kwargs['user_id']).order_by('id')
         else:
             return Post.objects.all().order_by('id')

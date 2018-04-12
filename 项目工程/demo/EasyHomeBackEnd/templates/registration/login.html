@@ -5,8 +5,18 @@
 {% block bodyclass %}login{% endblock bodyclass %}
 
 {% block main %}
+    {% load static %}
     <div class="unit-1-2 unit-1-on-mobile">
-        <h3>登录</h3>
+        <br/><br/><br/><br/>
+        <div class="flex-center">
+            <img src="{% static 'supervise/images/white_icon.png' %}">
+        </div>
+        <div class="flex-center">
+            <h1>您的新一代设计助手</h1>
+        </div>
+        <div class="flex-center">
+            <h3>登录</h3>
+        </div>
         <form class="form" action="{% url 'login' %}" method="post">
             {% csrf_token %}
             {{ form.non_field_errors }}

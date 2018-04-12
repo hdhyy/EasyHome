@@ -21,6 +21,7 @@ from community.feeds import AllPostsRssFeed
 from . import views
 
 urlpatterns = [
+                  path('', views.IndexView.as_view(), name='index'),
                   path('admin/', admin.site.urls),
                   path('polls/', include('polls.urls')),
                   path('supervise/', include('supervise.urls')),
@@ -30,6 +31,5 @@ urlpatterns = [
                   path('supervise/', include('django.contrib.auth.urls')),
                   path('all/rss/', AllPostsRssFeed(), name='rss'),
                   path('search/', include('haystack.urls')),
-                  path('', views.IndexView.as_view(), name='index')
               ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

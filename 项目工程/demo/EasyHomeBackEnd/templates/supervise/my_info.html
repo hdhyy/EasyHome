@@ -11,29 +11,58 @@
             <div class="row">
                 <div class="medium-6 columns" data-equalizer="first">
                     <div class="row">
-                        <div class="medium-6 columns small-centered">
-                            <h4>用户个人信息</h4><br/>
-                            <strong>头像</strong>
-                            <img src="{{ user.avatar.url }}" width="250" height="250" class="right"/>
-                            <br/>
+                        <div class="medium-8 columns small-centered">
+                            <div class="row collapse prefix-radius">
+                                <h4>用户个人信息</h4><br/>
+                                <div class="small-3 columns">
+                                    <span class="prefix">头像</span>
+                                </div>
+                                <img src="{{ user.avatar.url }}" width="250" height="250" class="right"/>
+                            </div>
                         </div>
                     </div>
+                    <br/>
                     <div class="row">
-                        <div class="medium-6 columns small-centered">
-                            <strong>姓名</strong>
-                            {{ user.get_full_name }}
-                            <br/>
-                            <strong>用户名</strong>
-                            {{ user.username }}
-                            <br/>
-                            <strong>邮箱</strong>
-                            {{ user.email }}
-                            <br/>
-                            <strong>年龄</strong>
-                            {{ personalInfo.age }}
-                            <br/>
-                            <strong>职业</strong>
-                            {{ personalInfo.career }}
+                        <div class="medium-8 columns small-centered">
+                            <div class="row collapse prefix-radius">
+                                <div class="small-3 columns">
+                                    <span class="prefix">姓名</span>
+                                </div>
+                                <div class="small-9 columns">
+                                    <input type="text" value="{{ user.get_full_name }}" placeholder="Value"
+                                           disabled="disabled">
+                                </div>
+                                <div class="small-3 columns">
+                                    <span class="prefix">用户名</span>
+                                </div>
+                                <div class="small-9 columns">
+                                    <input type="text" value="{{ user.username }}" placeholder="Value"
+                                           disabled="disabled">
+                                </div>
+
+                                <div class="small-3 columns">
+                                    <span class="prefix">邮箱</span>
+                                </div>
+                                <div class="small-9 columns">
+                                    <input type="text" value="{{ user.email }}" placeholder="Value" disabled="disabled">
+                                </div>
+
+                                <div class="small-3 columns">
+                                    <span class="prefix">年龄</span>
+                                </div>
+                                <div class="small-9 columns">
+                                    <input type="text" value="{{ personalInfo.age }}" placeholder="Value"
+                                           disabled="disabled">
+                                </div>
+
+                                <div class="small-3 columns">
+                                    <span class="prefix">职业</span>
+                                </div>
+                                <div class="small-9 columns">
+                                    <input type="text" value="{{ personalInfo.career }}" placeholder="Value"
+                                           disabled="disabled">
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -41,9 +70,44 @@
                 </div>
                 <div class="medium-6 columns" data-equalizer="first">
                     <div class="row">
-                        <div class="medium-6 columns small-centered">
-                            <h4>用户账户信息</h4><br/>
-                            <strong>账户名称:{{ accountInfo.name }}</strong>
+                        <div class="medium-8 columns small-centered" data-equalizer-watch>
+                            <div class="row collapse prefix-radius">
+                                <h4>用户账户信息</h4>
+                                <br/>
+                                <div class="small-3 columns">
+                                    <span class="prefix">账户名称</span>
+                                </div>
+                                <div class="small-9 columns">
+                                    <input type="text" value="{{ accountInfo.name }}" placeholder="Value"
+                                           disabled="disabled">
+                                </div>
+
+                                <div class="small-3 columns">
+                                    <span class="prefix">最后登录时间</span>
+                                </div>
+                                <div class="small-9 columns">
+                                    <input type="text" value="{{ accountInfo.last_login_time }}" placeholder="Value"
+                                           disabled="disabled">
+                                </div>
+
+                                <div class="small-3 columns">
+                                    <span class="prefix">最后登录IP</span>
+                                </div>
+                                <div class="small-9 columns">
+                                    <input type="text" value="{{ accountInfo.last_login_ip }}" placeholder="Value"
+                                           disabled="disabled">
+                                </div>
+
+                                <div class="small-3 columns">
+                                    <span class="prefix">是否注销</span>
+                                </div>
+                                <div class="small-9 columns">
+                                    <input type="text" value="{{ accountInfo.cancellation }}" placeholder="Value"
+                                           disabled="disabled">
+                                </div>
+
+
+                            </div>
 
                         </div>
 

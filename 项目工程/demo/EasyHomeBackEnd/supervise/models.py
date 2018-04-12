@@ -1,6 +1,13 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""python doc"""
+
+__author__ = 'Di Hua'
+
 from django.db import models
-from django.conf import settings
 from django.contrib.auth.models import AbstractUser
+from django.utils import timezone
 
 
 def upload_to(instance, filename):
@@ -8,7 +15,7 @@ def upload_to(instance, filename):
 
 
 class User(AbstractUser):
-    nickname = models.CharField(max_length=20,blank=True)
+    nickname = models.CharField(max_length=20, blank=True)
     avatar = models.ImageField(upload_to=upload_to)
 
     class Meta(AbstractUser.Meta):
@@ -21,6 +28,8 @@ class User(AbstractUser):
 class AccountInfo(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=20)
+    last_login_time = models.DateTimeField(default=timezone.now())
+    last_login_ip = models.CharField(max_length=15, default='0.0.0.0')
     cancellation = models.BooleanField(default=False)
 
     def __str__(self):
@@ -35,5 +44,3 @@ class PersonalInfo(models.Model):
 
     def __str__(self):
         return self.name
-
-
