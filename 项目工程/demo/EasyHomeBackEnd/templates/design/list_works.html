@@ -35,7 +35,37 @@
 {% block jsfiles %}
     <script src="{% static 'design/js/three.js' %}"></script>
     <script src="{% static 'design/js/Detector.js' %}"></script>
-    <script src="{% static 'design/js/stats.min.js' %}"></script>
     <script src="{% static 'design/js/loaders/OBJLoader.js' %}"></script>
     <script src="{% static 'design/myjs/listWork.js' %}"></script>
+    <script>
+        var divs = document.getElementsByClassName('workdisplay');
+        var len = divs.length;
+        var canvases = new Array(len);
+        var apps = new Array(len);
+
+        var render = function () {
+            requestAnimationFrame(render);
+            apps.forEach(function (app) {
+                if(app){
+                    app.render();
+                }
+            });
+        };
+        for (var i = 0; i < len; i++) {
+            canvases[i] = document.createElement('canvas');
+            $(canvases[i]).css('width', '100%');
+            $(canvases[i]).css('height', '250');
+            divs[i].appendChild(canvases[i]);
+            apps[i] = new loadworkapp(canvases[i], divs[i].id);
+
+            apps[i].initThree();
+            apps[i].initScene();
+            apps[i].initCamera();
+            apps[i].initHelper();
+            apps[i].resizeDisplayGL();
+            apps[i].initContent();
+            render();
+        }
+
+    </script>
 {% endblock jsfiles %}
