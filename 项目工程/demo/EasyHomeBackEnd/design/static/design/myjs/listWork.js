@@ -11,7 +11,7 @@ var loadworkapp = (function () {
         this.recalcAspectRatio();
 
         this.cameraDefaults = {
-            posCamera: new THREE.Vector3(0.0, 10.0, 30.0),
+            posCamera: new THREE.Vector3(50.0, 50.0, 50.0),
             posCameraTarget: new THREE.Vector3(0, 0, 0),
             near: 0.1,
             far: 10000,

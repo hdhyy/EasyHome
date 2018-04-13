@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2428200-fad4-46a0-a228-f13c5379b973" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/design/migrations/0005_auto_20180413_1337.py" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/upload/model/myscene.json" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/whoosh_index/_MAIN_34.toc" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/design/models.py" afterPath="$PROJECT_DIR$/design/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/design/static/design/myjs/jsonloaderapp.js" afterPath="$PROJECT_DIR$/design/static/design/myjs/jsonloaderapp.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/design/static/design/myjs/listWork.js" afterPath="$PROJECT_DIR$/design/static/design/myjs/listWork.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/design/list_works.html" afterPath="$PROJECT_DIR$/templates/design/list_works.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,17 +23,17 @@
         <entry file="file://$PROJECT_DIR$/templates/design/list_works.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
-              <caret line="40" column="66" lean-forward="true" selection-start-line="40" selection-start-column="66" selection-end-line="40" selection-end-column="66" />
+              <caret line="40" column="66" lean-forward="false" selection-start-line="40" selection-start-column="66" selection-end-line="40" selection-end-column="66" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/design/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
-              <caret line="56" column="85" lean-forward="true" selection-start-line="56" selection-start-column="85" selection-end-line="56" selection-end-column="85" />
+              <caret line="56" column="85" lean-forward="false" selection-start-line="56" selection-start-column="85" selection-end-line="56" selection-end-column="85" />
               <folding />
             </state>
           </provider>
@@ -46,7 +43,7 @@
         <entry file="file://$PROJECT_DIR$/design/forms.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="350">
-              <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+              <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -55,8 +52,28 @@
       <file leaf-file-name="listWork.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/design/static/design/myjs/listWork.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1900">
-              <caret line="82" column="52" lean-forward="false" selection-start-line="82" selection-start-column="46" selection-end-line="82" selection-end-column="52" />
+            <state relative-caret-position="475">
+              <caret line="19" column="27" lean-forward="false" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myobjloader.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/design/static/design/myjs/myobjloader.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myscene.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/upload/model/myscene.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -86,7 +103,7 @@
         <entry file="file://$PROJECT_DIR$/design/static/design/myjs/listModelTest.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="250">
-              <caret line="115" column="28" lean-forward="true" selection-start-line="115" selection-start-column="28" selection-end-line="115" selection-end-column="28" />
+              <caret line="115" column="28" lean-forward="false" selection-start-line="115" selection-start-column="28" selection-end-line="115" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -97,16 +114,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1125">
               <caret line="45" column="21" lean-forward="false" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="seeModelTest.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/design/static/design/myjs/seeModelTest.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="153" column="60" lean-forward="true" selection-start-line="153" selection-start-column="60" selection-end-line="153" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -200,10 +207,10 @@
         <option value="$PROJECT_DIR$/templates/design/see_model.html" />
         <option value="$PROJECT_DIR$/design/static/design/myjs/jsonloaderapp.js" />
         <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/design/static/design/myjs/listWork.js" />
         <option value="$PROJECT_DIR$/templates/design/list_works.html" />
         <option value="$PROJECT_DIR$/design/forms.py" />
         <option value="$PROJECT_DIR$/design/models.py" />
+        <option value="$PROJECT_DIR$/design/static/design/myjs/listWork.js" />
       </list>
     </option>
   </component>
@@ -213,7 +220,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="140" />
     <option name="y" value="105" />
     <option name="width" value="1440" />
@@ -248,12 +255,6 @@
             <path>
               <item name="EasyHomeBackEnd" type="b2602c69:ProjectViewProjectNode" />
               <item name="EasyHomeBackEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EasyHomeBackEnd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EasyHomeBackEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="design" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -351,7 +352,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1578125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -387,16 +388,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/EasyHomeBackEnd/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="30" column="74" lean-forward="true" selection-start-line="30" selection-start-column="74" selection-end-line="30" selection-end-column="74" />
-          <folding>
-            <element signature="e#639#671#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/python34/Lib/site-packages/django/contrib/auth/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
@@ -678,14 +669,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/design/static/design/myjs/myobjloader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-625">
-          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/design/static/design/myjs/seeModelTest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -702,38 +685,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/design/static/design/myjs/listModelTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="115" column="28" lean-forward="true" selection-start-line="115" selection-start-column="28" selection-end-line="115" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/design/static/design/myjs/listModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/design/static/design/myjs/listWork.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1900">
-          <caret line="82" column="52" lean-forward="false" selection-start-line="82" selection-start-column="46" selection-end-line="82" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/design/static/design/myjs/jsonloaderapp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="45" column="21" lean-forward="false" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/supervise/static/supervise/css/supervise.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -745,7 +696,7 @@
     <entry file="file://$PROJECT_DIR$/templates/design/list_works.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
-          <caret line="40" column="66" lean-forward="true" selection-start-line="40" selection-start-column="66" selection-end-line="40" selection-end-column="66" />
+          <caret line="40" column="66" lean-forward="false" selection-start-line="40" selection-start-column="66" selection-end-line="40" selection-end-column="66" />
           <folding />
         </state>
       </provider>
@@ -793,7 +744,7 @@
     <entry file="file://$PROJECT_DIR$/design/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
-          <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -809,7 +760,55 @@
     <entry file="file://$PROJECT_DIR$/design/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
-          <caret line="56" column="85" lean-forward="true" selection-start-line="56" selection-start-column="85" selection-end-line="56" selection-end-column="85" />
+          <caret line="56" column="85" lean-forward="false" selection-start-line="56" selection-start-column="85" selection-end-line="56" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design/static/design/myjs/listModelTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="115" column="28" lean-forward="false" selection-start-line="115" selection-start-column="28" selection-end-line="115" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design/static/design/myjs/jsonloaderapp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1125">
+          <caret line="45" column="21" lean-forward="false" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design/static/design/myjs/listModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design/static/design/myjs/listWork.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="19" column="27" lean-forward="false" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design/static/design/myjs/myobjloader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upload/model/myscene.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
