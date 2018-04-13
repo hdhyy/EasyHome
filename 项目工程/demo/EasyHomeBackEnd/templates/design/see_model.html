@@ -6,13 +6,48 @@
         <div class="medium-12 columns">
             <div class="row">
                 <div class="medium-6 columns">
-                    <div class="medium-3 columns small-centered">
-                        <h4>{{ model.name }}</h4>
+                    <div class="row">
+                        <div class="medium-10 columns small-centered">
+                            <div class="row">
+                                <div class="medium-3 columns">
+                                    <br/>
+                                    <h4>模型信息</h4>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="row collapse prefix-radius">
+
+                                <div class="small-3 columns">
+                                    <span class="prefix">模型名称</span>
+                                </div>
+                                <div class="small-9 columns">
+                                    <input type="text" value="{{ model.name }}" placeholder="Value"
+                                           disabled="disabled">
+                                </div>
+                                <div class="small-3 columns">
+                                    <span class="prefix">模型类型</span>
+                                </div>
+                                <div class="small-9 columns">
+                                    <input type="text" value="{{ model.modelType.name }}" placeholder="Value"
+                                           disabled="disabled">
+                                </div>
+
+                                <div class="small-3 columns">
+                                    <span class="prefix">家具类型</span>
+                                </div>
+                                <div class="small-9 columns">
+                                    <input type="text" value="{{ model.furnitureType.name }}" placeholder="Value"
+                                           disabled="disabled">
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+
                 </div>
                 <div class="medium-6 columns">
                     <canvas id="{{ model.file.url }}" class="modeldetail">
-                    <div id="feedback"></div>
+                        <div id="feedback"></div>
                     </canvas>
                 </div>
             </div>

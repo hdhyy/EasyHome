@@ -7,11 +7,28 @@ def upload_to(instance, filename):
     return '/'.join([str(instance.getdicname()), instance.name, filename])
 
 
+class ModelType(models.Model):
+    name = models.CharField(max_length=20)
+    extension = models.CharField(max_length=10)
+
+    def __str__(self):
+        return self.name
+
+
+class FurnitureType(models.Model):
+    name = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.name
+
+
 class Model(models.Model):
     name = models.CharField(max_length=20)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     upload_time = models.DateTimeField(auto_now_add=True)
     file = models.FileField(upload_to=upload_to)
+    modelType = models.ForeignKey(ModelType, on_delete=models.CASCADE, default=None)
+    furnitureType = models.ForeignKey(FurnitureType, on_delete=models.CASCADE, default=None)
 
     def getdicname(self):
         return 'model'

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    <div class="medium-6 columns small-centered">
+        <form action="{% url 'design:addWork' %}" method="post" enctype="multipart/form-data">{% csrf_token %}
+            <fieldset>
+                <legend>添加我的作品：</legend>
+                {{ form.as_table }}
+            </fieldset>
+            <input type="submit" value="保存" class="button"/>
+        </form>
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+
+{% endblock main %}

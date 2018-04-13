@@ -5,7 +5,7 @@ from .models import Model, Texture, Work
 class ModelsForm(forms.ModelForm):
     class Meta:
         model = Model
-        fields = ['name', 'file']
+        fields = ['name', 'furnitureType', 'modelType', 'file']
 
 
 class TexturesForm(forms.ModelForm):
