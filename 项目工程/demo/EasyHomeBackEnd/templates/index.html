@@ -20,23 +20,20 @@
         <p>户型选择</p>
         <select id="indoortype_selection">
             {% for indoortype in indoortype_list %}
-                <option value="{{ indoortype.file.url }}">{{ indoortype.name }}</option>
+                <option class="{{ indoortype.id }}" value="{{ indoortype.file.url }}">{{ indoortype.name }}</option>
             {% endfor %}
         </select>
 
-        <canvas id="indoortype_display" width="940" height="400"></canvas>
+        <span id="indoortype_display"><canvas width="940" height="400"></canvas></span>
 
         <div class="medium-12 small-centered">
             <div class="row">
                 <div class="medium-2 columns small-centered">
                     <br/>
-                    <a href="{% url 'design:designface' 1 %}" class="button small" role="button">
-                        进入设计
-                    </a>
+                    <button class="button small" onclick="enterDesign()">进入设计</button>
                 </div>
             </div>
         </div>
-
 
         </button>
         <a class="close-reveal-modal">&times;</a>
@@ -49,27 +46,46 @@
     <script src="{% static 'design/js/controls/TrackballControls.js' %}"></script>
     <script src="{% static 'design/myjs/jsonloaderapp.js' %}"></script>
     <script>
+        function enterDesign() {
+            var selection = document.getElementById("indoortype_selection");
+            var index = selection.selectedIndex;
+            var id = selection.options[index].className;
+            var designurl = "{% url 'design:designface' pk=0%}";
+            window.location.href = designurl.replace("0", id);
+        }
+
+        var apps = [];
         $("#indoortype_selection").change(function () {
-            var url = document.getElementById("indoortype_selection").value;
-            var canvas = document.getElementById("indoortype_display");
-            var app = new objloaderapp(canvas, url);
+            var selection = document.getElementById("indoortype_selection");
+            var url = selection.value;
+            var index = selection.selectedIndex;
+            var span = document.getElementById("indoortype_display");
+            var childs = span.childNodes;
+            for (var i = 0; i < childs.length; i++) {
+                span.removeChild(childs[i]);
+            }
+            var canvas = document.createElement('canvas');
+            canvas.width = 940;
+            canvas.height = 400;
+            span.appendChild(canvas);
+            apps[index] = new objloaderapp(canvas, url);
             var resizeWindow = function () {
-                app.resizeDisplayGL();
+                apps[index].resizeDisplayGL();
             };
             var render = function () {
                 requestAnimationFrame(render);
-                app.render();
+                apps[index].render();
             };
             window.addEventListener('resize', resizeWindow, false);
-            app.initThree();
-            app.initScene();
-            app.initCamera();
-            app.initLight();
-            app.initHelper();
-            app.initControls();
-            app.initObject();
-            app.resizeDisplayGL();
-            app.initContent();
+            apps[index].initThree();
+            apps[index].initScene();
+            apps[index].initCamera();
+            apps[index].initLight();
+            apps[index].initHelper();
+            apps[index].initControls();
+            apps[index].initObject();
+            apps[index].resizeDisplayGL();
+            apps[index].initContent();
             render();
         });
     </script>

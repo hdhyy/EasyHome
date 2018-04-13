@@ -95,7 +95,6 @@ var objloaderapp = (function () {
                 myscene.add(obj);
             }
         });
-        this.scene = myscene;
     };
 
     objloaderapp.prototype.resizeDisplayGL = function () {
