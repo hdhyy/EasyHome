@@ -5,6 +5,11 @@
 {% block bodyclass %}register{% endblock bodyclass %}
 
 {% block main %}
+    <style>
+        label {
+            color: white;
+        }
+    </style>
     <div class="unit-1-2 unit-1-on-mobile">
         <h3>注册</h3>
         <form class="form" action="{% url 'supervise:register' %}" method="post">

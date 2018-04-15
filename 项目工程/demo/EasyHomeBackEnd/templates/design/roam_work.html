@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>作品漫游</title>
+    <script src="{% static 'design/js/three.js' %}"></script>
+    <script src="{% static 'design/js/controls/TrackballControls.js' %}"></script>
+    <script src="{% static "supervise/js/jquery.min.js" %}"></script>
+    <script src="{% static 'design/myjs/jsonloaderapp.js' %}"></script>
+</head>
+<body>
+
+</body>
+
+<script>
+    var canvas = document.createElement('canvas');
+    $(canvas).css('width', '100%');
+    document.body.appendChild(canvas);
+    var url = "{{ work.file.url }}";
+    var app = new objloaderapp(canvas, url);
+    var resizeWindow = function () {
+        app.resizeDisplayGL();
+    };
+    var render = function () {
+        requestAnimationFrame(render);
+        app.render();
+    };
+    window.addEventListener('resize', resizeWindow, false);
+    app.initThree();
+    app.initScene();
+    app.initCamera();
+    app.initHelper();
+    app.initControls();
+    app.resizeDisplayGL();
+    app.initContent();
+    render();
+</script>
+</html>

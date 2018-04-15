@@ -204,3 +204,8 @@ class WorkDetailView(DetailView):
     template_name = 'design/see_work.html'
 
 
+class WorkRoamView(DetailView):
+    model = Work
+    template_name = 'design/roam_work.html'
+
+

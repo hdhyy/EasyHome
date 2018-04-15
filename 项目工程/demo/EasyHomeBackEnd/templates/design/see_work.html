@@ -1,10 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block main %}
 
-</body>
-</html>
+    <div class="row">
+        <div class="medium-12 columns">
+            <div class="row">
+                <div class="medium-6 columns small-centered">
+                    <div class="row">
+                        <div class="medium-3 columns">
+                            <br/>
+                            <h4>作品信息</h4>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row collapse prefix-radius">
+
+                        <div class="small-3 columns">
+                            <span class="prefix">作品名称</span>
+                        </div>
+                        <div class="small-9 columns">
+                            <input type="text" value="{{ work.name }}" placeholder="Value"
+                                   disabled="disabled">
+                        </div>
+                        <div class="small-3 columns">
+                            <span class="prefix">作品类型</span>
+                        </div>
+                        <div class="small-9 columns">
+                            <input type="text" value="{{ work.sceneType.name }}" placeholder="Value"
+                                   disabled="disabled">
+                        </div>
+
+                        <div class="small-3 columns">
+                            <span class="prefix">生成时间</span>
+                        </div>
+                        <div class="small-9 columns">
+                            <input type="text" value="{{ work.generate_time }}" placeholder="Value"
+                                   disabled="disabled">
+                        </div>
+
+                        <div class="small-2 columns small-centered">
+                            <button class="center" onclick="toRoam()">作品漫游</button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock main %}
+
+{% block jsfiles %}
+    <script>
+        function toRoam() {
+            window.location.href = "{% url 'design:roamWork' work.id%}";
+        }
+    </script>
+{% endblock jsfiles %}

@@ -17,4 +17,6 @@ urlpatterns = [
     path('works/add/', views.WorkAddView.as_view(), name='addWork'),
     path('works/list/<int:user_id>', views.WorkListView.as_view(), name='listWork'),
     path('works/<int:pk>/', views.WorkDetailView.as_view(), name='seeWork'),
+    path('works/roma/<int:pk>/', views.WorkRoamView.as_view(), name='roamWork'),
+
 ]
