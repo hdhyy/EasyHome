@@ -38,8 +38,9 @@ var Storage = function () {
 
 				database = event.target.result;
 
-				callback();
-
+				if(callback){
+					callback();
+				}
 			};
 			request.onerror = function ( event ) {
 

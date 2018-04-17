@@ -57,34 +57,57 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="medium-12 columns small-centered">
+                    <div class="sticky">
+                        <nav class="top-bar" data-topbar>
+                            <ul class="title-area">
+                                <li class="name">
+                                    <!-- 如果你不需要标题或图标可以删掉它 -->
+                                    <h1><a href="#">EasyHome</a></h1>
+                                </li>
+                                <!-- 小屏幕上折叠按钮: 去掉 .menu-icon 类，可以去除图标。
+                                     如果需要只显示图片，可以删除 "Menu" 文本 -->
+                                <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+                            </ul>
+                            <section class="top-bar-section">
+                                <ul class="right">
+                                    <li class="{% block mainHomeActive %}{% endblock mainHomeActive %}"><a
+                                            href="{% url 'index' %}"><i class="fi-home"></i> 主页</a></li>
+                                    <li class="divider"></li>
+                                    {% if user.is_authenticated %}
+                                        <li class="{% block modelActive %}{% endblock modelActive %}"><a
+                                                href="{% url 'design:listModel' user.id %}"><i
+                                                class="fi-list-thumbnails"></i> 模型管理</a></li>
+                                        <li class="divider"></li>
+                                        <li class="{% block textureActive %}{% endblock textureActive %}"><a
+                                                href="{% url 'design:listTexture' user.id %}"><i
+                                                class="fi-graph-bar"></i> 纹理管理</a></li>
+                                        <li class="divider"></li>
+                                        <li class="{% block workActive %}{% endblock workActive %}"><a
+                                                href="{% url 'design:listWork' user.id %}"><i class="fi-camera"></i>
+                                            作品管理</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li class="{% block myinfoActive %}{% endblock myinfoActive %}"><a
+                                                href="{% url 'supervise:myinfo' user.id %}"><i class="fi-torso"></i>
+                                            我的信息</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li><a href="{% url 'community:index' user.id %}"><i class="fi-torsos-all"></i>
+                                            家装社区</a>
+                                        </li>
+                                    {% else %}
+                                        <li><a href="{% url 'community:indexT' %}"><i class="fi-torsos-all"></i>
+                                            家装社区</a>
+                                        </li>
+                                    {% endif %}
 
-            <div class="sticky">
-                <nav class="top-bar" data-topbar>
-                    <ul class="title-area">
-                        <li class="name">
-                            <!-- 如果你不需要标题或图标可以删掉它 -->
-                            <h1><a href="#">EasyHome</a></h1>
-                        </li>
-                        <!-- 小屏幕上折叠按钮: 去掉 .menu-icon 类，可以去除图标。
-                             如果需要只显示图片，可以删除 "Menu" 文本 -->
-                        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-                    </ul>
-                    <section class="top-bar-section">
-                        <ul class="right">
-                            <li class="active"><a href="{% url 'index' %}">主页</a></li>
-                            {% if user.is_authenticated %}
-                                <li><a href="{% url 'design:listModel' user.id %}">模型管理</a></li>
-                                <li><a href="{% url 'design:listTexture' user.id %}">纹理管理</a></li>
-                                <li><a href="{% url 'design:listWork' user.id %}">作品管理</a></li>
-                                <li><a href="{% url 'supervise:myinfo' user.id %}">我的信息</a></li>
-                                <li><a href="{% url 'community:index' user.id %}">家装社区</a></li>
-                            {% else %}
-                                <li><a href="{% url 'community:indexT' %}">家装社区</a></li>
-                            {% endif %}
-
-                        </ul>
-                    </section>
-                </nav>
+                                </ul>
+                            </section>
+                        </nav>
+                    </div>
+                </div>
             </div>
             {% block main %}
             {% endblock main %}

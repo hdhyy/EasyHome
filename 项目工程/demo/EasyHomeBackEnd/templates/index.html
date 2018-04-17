@@ -8,7 +8,7 @@
                     <div class="medium-2 columns small-centered">
                         <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
                         <button class="button large expand radius" data-reveal-id="myModal">
-                            设计我的家居
+                            <i class="fi-pencil"></i> 设计我的家居
                         </button>
                     </div>
                 </div>
@@ -30,7 +30,7 @@
             <div class="row">
                 <div class="medium-2 columns small-centered">
                     <br/>
-                    <button class="button small" onclick="enterDesign()">进入设计</button>
+                    <button class="button small" onclick="enterDesign()"><i class="fi-pencil"></i> 进入设计</button>
                 </div>
             </div>
         </div>
@@ -44,17 +44,25 @@
 {% block jsfiles %}
     <script src="{% static 'design/js/three.js' %}"></script>
     <script src="{% static 'design/js/controls/TrackballControls.js' %}"></script>
+    <script src="{% static 'design/js/Storage.js' %}"></script>
     <script src="{% static 'design/myjs/jsonloaderapp.js' %}"></script>
     <script>
+        var storage = new Storage();
+        storage.init();
+
         function enterDesign() {
             var selection = document.getElementById("indoortype_selection");
             var index = selection.selectedIndex;
+            if (index !== 0) {
+                storage.clear();
+            }
             var id = selection.options[index].className;
             var designurl = "{% url 'design:designface' pk=0%}";
             window.location.href = designurl.replace("0", id);
         }
 
         var apps = [];
+
         $("#indoortype_selection").change(function () {
             var selection = document.getElementById("indoortype_selection");
             var url = selection.value;
@@ -88,3 +96,6 @@
         });
     </script>
 {% endblock jsfiles %}
+{% block mainHomeActive %}
+active
+{% endblock mainHomeActive %}

@@ -13,7 +13,7 @@
                     {% for texture in texture_list %}
                         <li style="text-align: center">
                             <div id="{{ texture.file.url }}" class="texturedisplay">
-                                <img src="{{ texture.file.url }}" width="270" height="270"/>
+                                <img src="{{ texture.file.url }}" style="width: 100%;height: 250px"/>
                             </div>
                             <br/>
                             <a href="{% url 'design:seeTexture' texture.id %}">{{ texture.name }}
@@ -32,3 +32,7 @@
         </div>
     </div>
 {% endblock main %}
+
+{% block textureActive %}
+active
+{% endblock textureActive %}
