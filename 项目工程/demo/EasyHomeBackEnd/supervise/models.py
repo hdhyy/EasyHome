@@ -16,7 +16,7 @@ def upload_to(instance, filename):
 
 class User(AbstractUser):
     nickname = models.CharField(max_length=20, blank=True)
-    avatar = models.ImageField(upload_to=upload_to)
+    avatar = models.ImageField(upload_to=upload_to, default=None)
 
     class Meta(AbstractUser.Meta):
         pass

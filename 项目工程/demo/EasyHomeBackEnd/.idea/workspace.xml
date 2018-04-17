@@ -2,37 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2428200-fad4-46a0-a228-f13c5379b973" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/design/roam_work.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/upload/indoortype/复式户型.json" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/model/一个模型/verify.obj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/model/两个模型/WaltHead.obj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/model/我的第三个模型/female02.obj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/model/我的第五个模型/female02.obj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/model/我的第六个模型/female02.obj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/whoosh_index/MAIN_48csja31ra095pho.seg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/whoosh_index/MAIN_c3tu1nd26r4rf0vl.seg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/whoosh_index/MAIN_rqgo0ln9nroim5hn.seg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/whoosh_index/MAIN_sor2p8t8ctxb6q72.seg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/whoosh_index/MAIN_uuxfmvgrjafke6ty.seg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/whoosh_index/_MAIN_35.toc" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/supervise/static/supervise/images/default-avatar.jpg" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/user/喵喵喵/11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/user/喵喵喵/5.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/design/admin.py" afterPath="$PROJECT_DIR$/design/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/design/urls.py" afterPath="$PROJECT_DIR$/design/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/design/views.py" afterPath="$PROJECT_DIR$/design/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/design/list_models.html" afterPath="$PROJECT_DIR$/templates/design/list_models.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/design/see_work.html" afterPath="$PROJECT_DIR$/templates/design/see_work.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/supervise/register.html" afterPath="$PROJECT_DIR$/templates/supervise/register.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/upload/model/UV_Grid_Sm/UV_Grid_Sm.jpg" afterPath="$PROJECT_DIR$/upload/texture/UV_Grid_Sm/UV_Grid_Sm.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/upload/model/brick_diffuse/brick_diffuse.jpg" afterPath="$PROJECT_DIR$/upload/texture/brick_diffuse/brick_diffuse.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/upload/model/brick_roughness/brick_roughness.jpg" afterPath="$PROJECT_DIR$/upload/texture/brick_roughness/brick_roughness.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/upload/model/colors/colors.png" afterPath="$PROJECT_DIR$/upload/texture/colors/colors.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/upload/model/hardwood2_diffuse/hardwood2_diffuse.jpg" afterPath="$PROJECT_DIR$/upload/texture/hardwood2_diffuse/hardwood2_diffuse.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/upload/model/indoortype1.json" afterPath="$PROJECT_DIR$/upload/indoortype/原始户型.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/upload/model/metal/metal.jpg" afterPath="$PROJECT_DIR$/upload/texture/metal/metal.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/upload/model/myscene.json" afterPath="$PROJECT_DIR$/upload/indoortype/精装户型.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/upload/model/null.json" afterPath="$PROJECT_DIR$/upload/indoortype/null.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/upload/model/scene.json" afterPath="$PROJECT_DIR$/upload/indoortype/基础户型.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/upload/model/sprite/sprite.png" afterPath="$PROJECT_DIR$/upload/texture/sprite/sprite.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supervise/models.py" afterPath="$PROJECT_DIR$/supervise/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supervise/views.py" afterPath="$PROJECT_DIR$/supervise/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/supervise/my_info.html" afterPath="$PROJECT_DIR$/templates/supervise/my_info.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,59 +22,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/design/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1275">
-              <caret line="53" column="17" lean-forward="false" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/community/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="roam_work.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/design/roam_work.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" column="69" lean-forward="false" selection-start-line="8" selection-start-column="69" selection-end-line="8" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="复式户型.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/upload/indoortype/复式户型.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="register.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/supervise/register.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="30" column="19" lean-forward="true" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+            <state relative-caret-position="100">
+              <caret line="17" column="37" lean-forward="true" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list_models.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="list_models.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/design/list_models.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="349">
@@ -108,41 +42,89 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/supervise/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="my_info.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/supervise/my_info.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1425">
+              <caret line="72" column="22" lean-forward="true" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/supervise/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="500">
+              <caret line="53" column="52" lean-forward="true" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/supervise/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="424">
+              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/python34/Lib/site-packages/django/core/handlers/base.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="138" column="0" lean-forward="false" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/design/urls.py">
+        <entry file="file://$PROJECT_DIR$/EasyHomeBackEnd/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="19" column="51" lean-forward="false" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
-              <folding />
+            <state relative-caret-position="350">
+              <caret line="29" column="58" lean-forward="true" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
+              <folding>
+                <element signature="e#639#671#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="see_model.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/design/see_model.html">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/supervise/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-              <folding />
+            <state relative-caret-position="150">
+              <caret line="6" column="31" lean-forward="true" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="see_work.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/design/see_work.html">
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/python34/Lib/site-packages/django/contrib/auth/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1300">
-              <caret line="52" column="19" lean-forward="false" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1025">
-              <caret line="41" column="19" lean-forward="false" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+            <state relative-caret-position="474">
+              <caret line="120" column="19" lean-forward="true" selection-start-line="120" selection-start-column="19" selection-end-line="120" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -197,7 +179,6 @@
         <option value="$PROJECT_DIR$/templates/design/see_texture.html" />
         <option value="$PROJECT_DIR$/design/static/design/myjs/listModelTest.js" />
         <option value="$PROJECT_DIR$/design/static/design/myjs/seeModel.js" />
-        <option value="$PROJECT_DIR$/supervise/views.py" />
         <option value="$PROJECT_DIR$/templates/design/list_textures.html" />
         <option value="$PROJECT_DIR$/design/static/design/js/Editor.js" />
         <option value="$PROJECT_DIR$/EasyHomeBackEnd/views.py" />
@@ -215,13 +196,11 @@
         <option value="$PROJECT_DIR$/templates/registration/password_reset_done.html" />
         <option value="$PROJECT_DIR$/templates/registration/password_reset_form.html" />
         <option value="$PROJECT_DIR$/EasyHomeBackEnd/urls.py" />
-        <option value="$PROJECT_DIR$/templates/supervise/my_info.html" />
         <option value="$PROJECT_DIR$/templates/community/index.html" />
         <option value="$PROJECT_DIR$/community/views.py" />
         <option value="$PROJECT_DIR$/templates/community/detail.html" />
         <option value="$PROJECT_DIR$/templates/community/base.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/supervise/models.py" />
         <option value="D:/python34/Lib/site-packages/django/contrib/auth/views.py" />
         <option value="$PROJECT_DIR$/supervise/static/supervise/css/supervise.css" />
         <option value="$PROJECT_DIR$/templates/registration/login.html" />
@@ -240,6 +219,9 @@
         <option value="$PROJECT_DIR$/templates/design/roam_work.html" />
         <option value="$PROJECT_DIR$/templates/supervise/register.html" />
         <option value="$PROJECT_DIR$/templates/design/list_models.html" />
+        <option value="$PROJECT_DIR$/supervise/views.py" />
+        <option value="$PROJECT_DIR$/supervise/models.py" />
+        <option value="$PROJECT_DIR$/templates/supervise/my_info.html" />
       </list>
     </option>
   </component>
@@ -249,7 +231,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="140" />
     <option name="y" value="105" />
     <option name="width" value="1440" />
@@ -285,7 +267,7 @@
             <path>
               <item name="EasyHomeBackEnd" type="b2602c69:ProjectViewProjectNode" />
               <item name="EasyHomeBackEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="design" type="462c0819:PsiDirectoryNode" />
+              <item name="supervise" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EasyHomeBackEnd" type="b2602c69:ProjectViewProjectNode" />
@@ -296,18 +278,7 @@
               <item name="EasyHomeBackEnd" type="b2602c69:ProjectViewProjectNode" />
               <item name="EasyHomeBackEnd" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="design" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EasyHomeBackEnd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EasyHomeBackEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="upload" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EasyHomeBackEnd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EasyHomeBackEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="upload" type="462c0819:PsiDirectoryNode" />
-              <item name="texture" type="462c0819:PsiDirectoryNode" />
+              <item name="supervise" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EasyHomeBackEnd" type="b2602c69:ProjectViewProjectNode" />
@@ -334,19 +305,19 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/家装设计系统---141110310华迪/项目工程/demo/EasyHomeBackEnd/files/views.py" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\家装设计系统---141110310华迪\项目工程\demo\EasyHomeBackEnd\upload\model" />
-      <recent name="D:\家装设计系统---141110310华迪\项目工程\demo\EasyHomeBackEnd\design\static\design\css" />
-      <recent name="D:\家装设计系统---141110310华迪\项目工程\demo\EasyHomeBackEnd\design\static\design\js\libs" />
-      <recent name="D:\家装设计系统---141110310华迪\项目工程\demo\EasyHomeBackEnd\design\static\design\js" />
-      <recent name="D:\家装设计系统---141110310华迪\项目工程\demo\EasyHomeBackEnd\design\static\design\js\geometries" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\家装设计系统---141110310华迪\项目工程\demo\EasyHomeBackEnd\upload\indoortype" />
       <recent name="D:\家装设计系统---141110310华迪\项目工程\demo\EasyHomeBackEnd\upload\texture" />
       <recent name="D:\家装设计系统---141110310华迪\项目工程\demo\EasyHomeBackEnd\design\static\design\js\libs" />
       <recent name="D:\家装设计系统---141110310华迪\项目工程\demo\EasyHomeBackEnd\design\static\design\js\controls" />
       <recent name="D:\家装设计系统---141110310华迪\项目工程\demo\EasyHomeBackEnd\design\static\design\js\loaders" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\家装设计系统---141110310华迪\项目工程\demo\EasyHomeBackEnd\supervise\static\supervise\images" />
+      <recent name="D:\家装设计系统---141110310华迪\项目工程\demo\EasyHomeBackEnd\upload\model" />
+      <recent name="D:\家装设计系统---141110310华迪\项目工程\demo\EasyHomeBackEnd\design\static\design\css" />
+      <recent name="D:\家装设计系统---141110310华迪\项目工程\demo\EasyHomeBackEnd\design\static\design\js\libs" />
+      <recent name="D:\家装设计系统---141110310华迪\项目工程\demo\EasyHomeBackEnd\design\static\design\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -403,8 +374,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1578125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -412,7 +382,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33544973" sideWeight="0.55677086" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33544973" sideWeight="0.55677086" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -440,48 +410,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/design/static/design/js/Menubar.Edit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/design/static/design/js/Viewport.Info.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/design/static/design/js/Viewport.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1325">
-          <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/design/static/design/js/History.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/design/static/design/js/Editor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="85" column="42" lean-forward="false" selection-start-line="85" selection-start-column="42" selection-end-line="85" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/design/static/design/js/Detector.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/design/static/design/js/three.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
@@ -510,20 +438,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/supervise/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/supervise/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/supervise/static/supervise/css/foundation-icons.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -549,13 +463,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/supervise/my_info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="75" column="37" lean-forward="true" selection-start-line="75" selection-start-column="37" selection-end-line="75" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -705,7 +612,7 @@
         <state relative-caret-position="175">
           <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -720,7 +627,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/design/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
+        <state relative-caret-position="0">
           <caret line="53" column="17" lean-forward="false" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="17" />
           <folding />
         </state>
@@ -765,19 +672,99 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/supervise/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="30" column="19" lean-forward="true" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/design/list_models.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="349">
           <caret line="23" column="40" lean-forward="false" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supervise/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/python34/Lib/site-packages/django/core/handlers/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="138" column="0" lean-forward="false" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EasyHomeBackEnd/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="29" column="58" lean-forward="true" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
+          <folding>
+            <element signature="e#639#671#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/supervise/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="17" column="37" lean-forward="true" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/builtins.pyi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="628" column="0" lean-forward="false" selection-start-line="628" selection-start-column="0" selection-end-line="628" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/python34/Lib/site-packages/django/contrib/auth/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="120" column="19" lean-forward="true" selection-start-line="120" selection-start-column="19" selection-end-line="120" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supervise/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="31" lean-forward="true" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supervise/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/supervise/my_info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1425">
+          <caret line="72" column="22" lean-forward="true" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supervise/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="53" column="52" lean-forward="true" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

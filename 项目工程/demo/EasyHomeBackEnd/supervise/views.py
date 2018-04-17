@@ -22,8 +22,13 @@ def register(request):
         # 验证数据的合法性
         if form.is_valid():
             # 如果提交数据合法，调用表单的 save 方法将用户数据保存到数据库
-            form.save()
-
+            user = form.save()
+            ai = AccountInfo()
+            pi = PersonalInfo()
+            ai.user = user
+            pi.user = user
+            ai.save()
+            pi.save()
             # 注册成功，跳转回首页
             if redirect_to:
                 return redirect(redirect_to)
